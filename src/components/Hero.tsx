@@ -1,17 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { ExternalLink, ChevronDown } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpg";
-
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    element?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
   const scrollToProjects = () => scrollToSection('projetos');
-
-  return (
-    <section className="min-h-screen bg-gradient-hero relative overflow-hidden">
+  return <section className="min-h-screen bg-gradient-hero relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-glow"></div>
@@ -33,36 +31,20 @@ const Hero = () => {
                 <h1 className="text-5xl md:text-7xl font-bold hero-text leading-tight">
                   Patrick Diniz
                 </h1>
-                <h2 className="text-2xl md:text-3xl text-primary font-semibold">
-                  Analista de Dados | Desenvolvedor Web
-                </h2>
+                <h2 className="text-2xl md:text-3xl text-primary font-semibold">Analista de Dados &amp; Automação T.I </h2>
                 <p className="text-lg text-foreground-muted max-w-lg leading-relaxed">
                   Transformando dados em insights e automatizando processos com soluções de tecnologia inovadoras e eficientes.
                 </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  size="lg" 
-                  className="bg-primary hover:bg-primary-dark text-primary-foreground font-semibold px-8 py-3 transition-all duration-300 hover:shadow-purple hover:-translate-y-1"
-                  onClick={scrollToProjects}
-                >
+                <Button size="lg" className="bg-primary hover:bg-primary-dark text-primary-foreground font-semibold px-8 py-3 transition-all duration-300 hover:shadow-purple hover:-translate-y-1" onClick={scrollToProjects}>
                   Ver Projetos
                   <ChevronDown className="ml-2 h-5 w-5" />
                 </Button>
                 
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-8 py-3 transition-all duration-300"
-                  asChild
-                >
-                  <a 
-                    href="https://www.linkedin.com/in/diniz-patrick/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex items-center"
-                  >
+                <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-8 py-3 transition-all duration-300" asChild>
+                  <a href="https://www.linkedin.com/in/diniz-patrick/" target="_blank" rel="noopener noreferrer" className="flex items-center">
                     Meu LinkedIn
                     <ExternalLink className="ml-2 h-5 w-5" />
                   </a>
@@ -75,11 +57,7 @@ const Hero = () => {
               <div className="relative">
                 <div className="absolute inset-0 bg-primary/20 rounded-2xl blur-2xl transform rotate-6"></div>
                 <div className="relative w-80 h-80 md:w-96 md:h-96">
-                  <img
-                    src={profilePhoto}
-                    alt="Patrick Diniz - Analista de Dados e Desenvolvedor Web"
-                    className="w-full h-full object-cover rounded-2xl border-2 border-primary/30 shadow-2xl transition-transform duration-300 hover:scale-105"
-                  />
+                  <img src={profilePhoto} alt="Patrick Diniz - Analista de Dados e Desenvolvedor Web" className="w-full h-full object-cover rounded-2xl border-2 border-primary/30 shadow-2xl transition-transform duration-300 hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent rounded-2xl"></div>
                 </div>
               </div>
@@ -93,8 +71,6 @@ const Hero = () => {
           <ChevronDown className="h-8 w-8 text-primary" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;

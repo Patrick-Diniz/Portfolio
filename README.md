@@ -6,15 +6,15 @@ Este repositório contém o código-fonte do meu portfólio pessoal, uma landing
 
 O layout foi construído com foco em um design limpo, responsivo e com microinterações que melhoram a experiência do usuário.
 
-## ✨ Funcionalidades Principais
+## 📝 Funcionalidades Principais
 
 O portfólio está estruturado nas seguintes seções:
 
-* [cite_start]**Hero Section:** Uma introdução direta com meu título profissional: **Analista de Dados & Automação T.I**[cite: 81].
-* [cite_start]**Sobre Mim:** Uma breve biografia profissional que descreve minha paixão por resolver problemas com tecnologia[cite: 86, 87, 88].
-* [cite_start]**Habilidades Técnicas:** Exibição das minhas competências, divididas em categorias como Análise de Dados, Desenvolvimento e Ferramentas[cite: 92, 94, 95, 96].
-* [cite_start]**Projetos em Destaque:** Uma galeria com meus trabalhos mais relevantes, incluindo "Dashboard de Análise Contratual" e "Automação de Fluxos de Trabalho em TI"[cite: 100, 102, 103, 104].
-* [cite_start]**Contato:** Seção com minhas informações de contato e um convite para colaboração[cite: 105, 107].
+* **Hero Section:** Uma introdução direta com meu título profissional: **Analista de Dados & Automação T.I**.
+* **Sobre Mim:** Uma breve biografia profissional que descreve minha paixão por resolver problemas com tecnologia.
+* **Habilidades Técnicas:** Exibição das minhas competências, divididas em categorias como Análise de Dados, Desenvolvimento e Ferramentas.
+* **Projetos em Destaque:** Uma galeria com meus trabalhos mais relevantes, incluindo "Dashboard de Análise Contratual" e "Automação de Fluxos de Trabalho em TI".
+* **Contato:** Seção com minhas informações de contato e um convite para colaboração.
 
 ## 🛠️ Tecnologias Utilizadas
 

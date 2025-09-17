@@ -21,7 +21,7 @@ const Navigation = () => {
         element: document.getElementById(item.id),
       }));
 
-      const scrollPosition = window.scrollY + 100;
+      const scrollPosition = window.scrollY + window.innerHeight / 2;
 
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = sections[i];
@@ -37,11 +37,15 @@ const Navigation = () => {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId === "hero" ? "root" : sectionId);
     if (sectionId === "hero") {
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
-      element?.scrollIntoView({ behavior: "smooth" });
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const navOffset = 80; // Offset para compensar a navegação fixa
+        const elementPosition = element.offsetTop - navOffset;
+        window.scrollTo({ top: elementPosition, behavior: "smooth" });
+      }
     }
     setIsOpen(false);
   };

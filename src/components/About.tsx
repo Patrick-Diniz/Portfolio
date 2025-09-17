@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <section id="sobre" className="section-padding bg-background-secondary">
+    <section id="sobre" className="min-h-screen flex items-center justify-center section-padding bg-background-secondary">
       <div className="container-width">
         <div className="max-w-4xl mx-auto text-center">
           <div className="space-y-8 animate-fade-in">

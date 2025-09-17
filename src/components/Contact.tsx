@@ -27,7 +27,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contato" className="section-padding bg-background">
+    <section id="contato" className="min-h-screen flex items-center justify-center section-padding bg-background">
       <div className="container-width">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold hero-text mb-6">

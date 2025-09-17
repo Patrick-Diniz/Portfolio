@@ -38,11 +38,11 @@ const Navigation = () => {
 
   const scrollToSection = (sectionId: string) => {
     if (sectionId === "hero") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      window.scrollTo({ top: 5, behavior: "smooth" });
     } else {
       const element = document.getElementById(sectionId);
       if (element) {
-        const navOffset = 80; // Offset para compensar a navegação fixa
+        const navOffset = 40; // Offset para compensar a navegação fixa
         const elementPosition = element.offsetTop - navOffset;
         window.scrollTo({ top: elementPosition, behavior: "smooth" });
       }

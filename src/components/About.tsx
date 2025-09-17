@@ -3,7 +3,7 @@ const About = () => {
     <section id="sobre" className="min-h-screen flex items-center justify-center section-padding bg-background-secondary">
       <div className="container-width">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="space-y-8 animate-fade-in">
+          <div className="space-y-8 animate-fade-in relative -top-20">
             <h2 className="text-4xl md:text-5xl font-bold hero-text mb-8">
               Sobre Mim
             </h2>

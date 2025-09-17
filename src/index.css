@@ -13,7 +13,7 @@
     --foreground-muted: 217 10% 70%;
 
     /* Purple primary colors */
-    --primary: 271 91% 65%;
+    --primary: 261 91% 65%;
     --primary-dark: 271 81% 55%;
     --primary-light: 271 91% 75%;
     --primary-foreground: 210 40% 98%;
@@ -49,14 +49,29 @@
     --radius: 0.75rem;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(271 91% 65%), hsl(271 81% 55%));
-    --gradient-secondary: linear-gradient(180deg, hsl(220 13% 12%), hsl(220 13% 8%));
-    --gradient-hero: linear-gradient(135deg, hsl(220 13% 8%) 0%, hsl(220 13% 12%) 50%, hsl(271 91% 65% / 0.1) 100%);
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(271 91% 65%),
+      hsl(271 81% 55%)
+    );
+    --gradient-secondary: linear-gradient(
+      180deg,
+      hsl(220 13% 12%),
+      hsl(220 13% 8%)
+    );
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(220 13% 8%) 0%,
+      hsl(220 13% 12%) 50%,
+      hsl(271 91% 65% / 0.1) 100%
+    );
 
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 hsl(220 13% 4% / 0.5);
-    --shadow-md: 0 4px 6px -1px hsl(220 13% 4% / 0.5), 0 2px 4px -1px hsl(220 13% 4% / 0.3);
-    --shadow-lg: 0 10px 15px -3px hsl(220 13% 4% / 0.5), 0 4px 6px -2px hsl(220 13% 4% / 0.3);
+    --shadow-md: 0 4px 6px -1px hsl(220 13% 4% / 0.5),
+      0 2px 4px -1px hsl(220 13% 4% / 0.3);
+    --shadow-lg: 0 10px 15px -3px hsl(220 13% 4% / 0.5),
+      0 4px 6px -2px hsl(220 13% 4% / 0.3);
     --shadow-purple: 0 10px 30px -10px hsl(271 91% 65% / 0.3);
 
     /* Animations */
@@ -84,7 +99,7 @@
   }
 
   .section-padding {
-    @apply py-20 px-4 md:px-8 lg:px-12;
+    @apply py-5 px-4 md:px-8 lg:px-12;
   }
 
   .container-width {

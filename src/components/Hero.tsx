@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ExternalLink, ChevronDown } from "lucide-react";
-import profilePhoto from "@/assets/profile-photo.jpg";
+import profilePhoto from "@/assets/profile_linkedin.png";
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -57,8 +57,8 @@ const Hero = () => {
               <div className="relative">
                 <div className="absolute inset-0 bg-primary/20 rounded-2xl blur-2xl transform rotate-6"></div>
                 <div className="relative w-80 h-80 md:w-96 md:h-96">
-                  <img src={profilePhoto} alt="Patrick Diniz - Analista de Dados e Desenvolvedor Web" className="w-full h-full object-cover rounded-2xl border-2 border-primary/30 shadow-2xl transition-transform duration-300 hover:scale-105" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent rounded-2xl"></div>
+                  <img src={profilePhoto} alt="Patrick Diniz - Analista de Dados e Desenvolvedor Web" className="w-full h-full object-cover shadow-2xl transition-transform duration-300 hover:scale-105" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent rounded-3xl"></div>
                 </div>
               </div>
             </div>

@@ -107,22 +107,7 @@ const Projects = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-16 animate-fade-in">
-          <div className="glass-card p-8 rounded-2xl max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              Interessado em ver mais projetos?
-            </h3>
-            <p className="text-foreground-muted mb-6">
-              Tenho diversos outros projetos em desenvolvimento. Entre em contato para conhecer meu portfólio completo.
-            </p>
-            <Button 
-              className="bg-primary hover:bg-primary-dark text-primary-foreground font-semibold px-8 py-3"
-              onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Entrar em Contato
-            </Button>
-          </div>
-        </div>
+        
       </div>
     </section>
   );

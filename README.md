@@ -1,73 +1,34 @@
-# Welcome to your Lovable project
+# Portfólio Pessoal — Patrick Diniz
 
-## Project info
+## 📖 Sobre o Projeto
 
-**URL**: https://lovable.dev/projects/3d64cce4-7ed9-4473-a7a1-4165edc45240
+Este repositório contém o código-fonte do meu portfólio pessoal, uma landing page de página única desenvolvida para apresentar minhas habilidades, experiência e projetos. O objetivo é servir como um cartão de visitas digital, centralizando minhas informações profissionais de forma moderna e acessível.
 
-## How can I edit this code?
+O layout foi construído com foco em um design limpo, responsivo e com microinterações que melhoram a experiência do usuário.
 
-There are several ways of editing your application.
+## ✨ Funcionalidades Principais
 
-**Use Lovable**
+O portfólio está estruturado nas seguintes seções:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3d64cce4-7ed9-4473-a7a1-4165edc45240) and start prompting.
+* [cite_start]**Hero Section:** Uma introdução direta com meu título profissional: **Analista de Dados & Automação T.I**[cite: 81].
+* [cite_start]**Sobre Mim:** Uma breve biografia profissional que descreve minha paixão por resolver problemas com tecnologia[cite: 86, 87, 88].
+* [cite_start]**Habilidades Técnicas:** Exibição das minhas competências, divididas em categorias como Análise de Dados, Desenvolvimento e Ferramentas[cite: 92, 94, 95, 96].
+* [cite_start]**Projetos em Destaque:** Uma galeria com meus trabalhos mais relevantes, incluindo "Dashboard de Análise Contratual" e "Automação de Fluxos de Trabalho em TI"[cite: 100, 102, 103, 104].
+* [cite_start]**Contato:** Seção com minhas informações de contato e um convite para colaboração[cite: 105, 107].
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🛠️ Tecnologias Utilizadas
 
-**Use your preferred IDE**
+Este projeto foi construído com um ecossistema moderno de desenvolvimento front-end, garantindo alta performance e produtividade.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+* **React:** Biblioteca principal para a construção da interface de usuário de forma componentizada.
+* **TypeScript:** Superset do JavaScript que adiciona tipagem estática, aumentando a robustez e a manutenibilidade do código.
+* **Vite:** Ferramenta de build extremamente rápida que proporciona uma experiência de desenvolvimento ágil com Hot Module Replacement (HMR).
+* **Tailwind CSS:** Framework CSS utility-first para a estilização rápida e customizável diretamente no HTML.
+* **Bun:** Toolkit JavaScript de alta performance, utilizado como package manager do projeto.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 📫 Contato
 
-Follow these steps:
+Vamos nos conectar!
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/3d64cce4-7ed9-4473-a7a1-4165edc45240) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+* [cite_start]**Email:** patricksdiniz@gmail.com [cite: 108]
+* [cite_start]**LinkedIn:** [in/diniz-patrick](https://www.linkedin.com/in/diniz-patrick/) [cite: 109]

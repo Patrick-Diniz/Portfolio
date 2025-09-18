@@ -30,5 +30,5 @@ Este projeto foi construído com um ecossistema moderno de desenvolvimento front
 
 Vamos nos conectar!
 
-* [cite_start]**Email:** patricksdiniz@gmail.com [cite: 108]
-* [cite_start]**LinkedIn:** [in/diniz-patrick](https://www.linkedin.com/in/diniz-patrick/) [cite: 109]
+* **Email:** patricksdiniz@gmail.com
+* **LinkedIn:** [in/diniz-patrick](https://www.linkedin.com/in/diniz-patrick/)

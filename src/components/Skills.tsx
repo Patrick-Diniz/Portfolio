@@ -23,9 +23,9 @@ const Skills = () => {
   ];
 
   return (
-    <section id="habilidades" className="min-h-screen flex items-center justify-center section-padding bg-background ">
+    <section id="habilidades" className="min-h-screen flex items-center justify-center section-padding bg-background mt-8 relative">
       <div className="container-width relative -top-5">
-        <div className="text-center mb-16 animate-fade-in">
+        <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold hero-text mb-6">
             Habilidades Técnicas
           </h2>

@@ -1,8 +1,8 @@
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import dashboardImage from "@/assets/project-dashboard.jpg";
-import automationImage from "@/assets/project-automation.jpg";
-import portalImage from "@/assets/project-portal.jpg";
+import dashboardImage from "@/assets/project-dashboard.webp";
+import automationImage from "@/assets/project-automation.webp";
+import portalImage from "@/assets/project-portal.webp";
 
 const Projects = () => {
   const projects = [
@@ -52,7 +52,7 @@ const Projects = () => {
               <div className="relative h-48 mb-6 rounded-xl overflow-hidden">
                 <img
                   src={project.image}
-                  alt={project.title}
+                  alt={project.title} loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                 />
                 <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-80`}></div>

@@ -29,7 +29,7 @@ const Contact = () => {
   return (
     <section id="contato" className="min-h-screen flex items-center justify-center section-padding bg-background">
       <div className="container-width relative mb-20">
-        <div className="text-center mb-16 animate-fade-in relative top-5">
+        <div className="text-center mb-24 animate-fade-in relative top-16">
           <h2 className="text-4xl md:text-5xl font-bold hero-text mb-6">
             Vamos Conversar!
           </h2>

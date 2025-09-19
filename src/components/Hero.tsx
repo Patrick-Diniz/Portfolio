@@ -6,7 +6,7 @@ const Hero = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const navOffset = 80; // altura aproximada do header/menu fixo
+      const navOffset = 40; // altura aproximada do header/menu fixo
       const elementPosition = element.offsetTop - navOffset;
       window.scrollTo({ top: elementPosition, behavior: "smooth" });
     }

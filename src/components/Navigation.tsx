@@ -42,7 +42,7 @@ const Navigation = () => {
     } else {
       const element = document.getElementById(sectionId);
       if (element) {
-        const navOffset = 80; // antes era 40 → ajustado
+        const navOffset = 40; // antes era 40 → ajustado
         const elementPosition = element.offsetTop - navOffset;
         window.scrollTo({ top: elementPosition, behavior: "smooth" });
       }

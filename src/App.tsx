@@ -24,7 +24,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/Portfolio">
+      <BrowserRouter>
         {/* Suspense mostra um fallback (PageLoader) enquanto o código da rota está sendo baixado */}
         <Suspense fallback={<PageLoader />}>
           <Routes>

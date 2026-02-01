@@ -1,0 +1,1129 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <!--============ Primary Meta Tags ============-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#030917"/>
+    <meta name="keywords" content="frontend, backend, animation, css, development web, desenvolvimento web, ux, ui, uxui" />
+    <meta name="author" content="Nasser Yousef Ali" />
+    <meta name="title" content="Nasser Yousef Ali | Front-End & UI Designer">
+    <meta name="description" content="Personal portfolio of Nasser Yousef Ali, Front-End Dev & UI Designer. So many projects and selected works.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="facebook-domain-verification" content="kf7cv5wnol4ux1m8mwkmbot3f91sp3" />
+
+    <!--============ Title ============-->
+    <title>Násser Yousef Ali | Front-End & UI Designer</title>
+
+    <!--============ CSS ============-->
+    <link rel="icon" type="image/png" href="svg/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+ 
+    <!--========== Open Graph / Facebook ===========-->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nasseryousef.com.br/">
+    <meta property="og:title" content="Nasser Yousef Ali | Front-End & UI Designer">
+    <meta property="og:description" content="Personal portfolio of Nasser Yousef Ali, Front-End Dev & UI Designer. So many projects and selected works.">
+    <meta property="og:image" content="svg/metatag-ny.png">
+
+    <!--=========== Twitter ===============-->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://nasseryousef.com.br/">
+    <meta property="twitter:title" content="Nasser Yousef Ali | Front-End & UI Designer">
+    <meta property="twitter:description" content="Personal portfolio of Nasser Yousef Ali, Front-End Dev & UI Designer. So many projects and selected works.">
+    <meta property="twitter:image" content="svg/metatag-ny.png">
+
+    <!--============ JS ============-->
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=WdKOs-spsBbSCJ22bJO11z7FwQJcHoPOYXHLmnUfNXRbr9FI7Rct93A37N6izexY" charset="UTF-8"></script><script src="js/svg-inject.min.js"></script>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.11.6/build/spline-viewer.js"></script>
+
+    <!--============ GTM <head> ============-->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TKVT8CT');</script>
+
+</head>
+<body>
+    
+    <!--============ GTM <body> ============-->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKVT8CT"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!--=====================================================================-->
+    <!--=========== SCREEN LOADING ============-->
+    <!--=====================================================================-->
+
+    <section class="screen-loading flex-center flex-column">
+        <img src="svg/logo-ny-stamp2.svg" class="icon-m" alt="" onload="SVGInject(this)" />
+
+        <img src="svg/signature-ny.svg" class="signature2" alt="" onload="SVGInject(this)" />
+    </section>
+    
+    
+
+
+    <!--=====================================================================-->
+    <!--=========== MENU ============-->
+    <!--=====================================================================-->
+    <header>
+        <div class="bg-header"></div>
+        <nav class="nav-menu">
+            <!--
+            <div class="nav-left">
+                <ul class="nav-list p-1">
+                    <li class="nav-item hidden"><a href="#home" class="nav-link mr-4" id="nav-home">Home</a></li>
+                    <li class="nav-item hidden"><a href="#section-about" class="nav-link" id="nav-about">About</a></li>
+                </ul>
+            </div>
+            -->
+
+            
+            <div class="logo">
+                <a href="#home"><img src="svg/logo-ny2.svg" alt="" onload="SVGInject(this)" /></a>
+            </div>
+            
+
+            <!--
+            <div>
+                <a href="#home"><img src="svg/logo-ny-letter.svg" alt="" onload="SVGInject(this)" /></a>
+            </div>
+            -->
+
+            <!--
+            <div class="nav-right">
+                <ul class="nav-list p-1">
+                    <li class="nav-item hidden"><a href="#works" class="nav-link" id="nav-works">Works</a></li>
+                    <li class="nav-item hidden"><a href="pdf/ResumeNasser.pdf" class="nav-link ml-4" target="_blank" id="nav-contact">Resume</a></li>
+                </ul>
+            </div>
+            -->
+        </nav>
+    </header>
+    
+
+    
+
+    <!--=====================================================================-->
+    <!--=========== HERO ============-->
+    <!--=====================================================================-->
+    <div class="relative">
+        <div class="bg-hero">
+            <!--
+            <img class="svg-bg-hero" src="svg/fig1-ny.svg" alt="" onload="SVGInject(this)">
+            -->
+            <!--
+            <script type="module" src="https://unpkg.com/@splinetool/viewer@1.3.1/build/spline-viewer.js"></script>
+            <spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/aoNyNAZCifpboHie/scene.splinecode"></spline-viewer>
+            -->
+
+            
+            <spline-viewer url="https://prod.spline.design/CRky4Fw4qQDvTsKj/scene.splinecode"></spline-viewer>
+
+            <!--<spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/miAU0kCh5v39Fcqf/scene.splinecode"></spline-viewer>-->
+            
+            <!--
+            <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.57/build/spline-viewer.js"></script>
+            <spline-viewer style="height: 100vh;" url="https://prod.spline.design/miAU0kCh5v39Fcqf/scene.splinecode"></spline-viewer>
+            -->
+        </div>
+
+        <section class="container-hero relative" id="home">
+            <div class="grid-1 disappear"></div>
+            <div class="grid-10 flex-center flex-column">
+                <blockquote>
+                    <h6 class="uppercase label-transparent-white text-shadow">Hi, i am</h6>
+                </blockquote>
+                <blockquote class="my-2">
+                    <h1 class="h0-title text-center text-shadow ml1">násser&nbsp;ali</h1>
+                </blockquote>
+                <blockquote>
+                    <h6 class="uppercase label-transparent-white text-shadow">front-end developer</h6>
+                </blockquote>
+                
+            </div>
+            <div class="grid-1 disappear"></div>
+
+            <div class="scroll-animation flex-center flex-column">
+                <blockquote>
+                    <div class="square-scroll"></div>
+                </blockquote>
+                <blockquote>
+                    <h6 class="mt-2">Scroll</h6>
+                </blockquote>
+            </div>
+        </section>
+    </div>
+
+
+
+    <!--=====================================================================-->
+    <!--=========== I AM FREELANCER ============-->
+    <!--=====================================================================-->
+    <div class="bb-gray"></div>
+    <section class="container">
+        <div class="row" id="section-iam">
+            <div class="grid-5">
+                <blockquote>
+                    <h6 class="uppercase label-transparent-white">I am</h6>
+                </blockquote>
+                <blockquote>
+                    <h3 class="mt-1">
+                        Brazilian
+                        Freelancer, Designer & Dev passionate 
+                        about bring design to life.
+                    </h3>
+                </blockquote>
+                <blockquote>
+                    <p class="color-gray mt-4" style="max-width: 600px;">
+                        Helping people to enter the digital age, always combining 
+                        design, code, motion and interaction, 
+                        always delivering my best.
+                    </p>
+                </blockquote>
+                <blockquote class="flex-start-row mt-2">
+                    <a href="https://instagram.com/nasseryousef__" target="_blank" class="tooltip" data-tooltip="Instagram">
+                        <img src="svg/ny7.webp" class="profile" alt="" onload="SVGInject(this)" />
+                    </a>
+                    
+                    <a href="https://instagram.com/nasseryousef__" target="_blank" class="tooltip" data-tooltip="Instagram">
+                    <div class="ml-2">
+                        <h5>Násser Yousef Ali</h5>
+                        <p class="color-gray">@nasseryousef__</p>
+                    </div>
+                    </a>
+                    
+                </blockquote>
+                
+            </div>
+            <blockquote class="grid-2 flex-start-end">
+                <h6 class="uppercase label-transparent-white">and I love</h6>
+            </blockquote>
+            <blockquote class="grid-5 relative py-0">
+
+                <h2 class="text-presentation-design">Design</h2>
+                <h2 class="text-presentation-code">Code</h2>
+                <h2 class="text-presentation-motion">Motion</h2>
+                <h2 class="text-presentation-3d">3D</h2>
+
+                <img src="svg/fig2-ny.svg" alt="" onload="SVGInject(this)" />
+
+            </blockquote>
+        </div>
+    </section>
+
+
+    <!--=====================================================================-->
+    <!--=========== NEW SELECTED WORKS ============-->
+    <!--=====================================================================-->
+    <div class="bb-white"></div>
+    <section class="container flex-center py-5 relative" id="section-text-works">
+        <div class="square-atari"></div>
+        <h1 class="h0-title text-shadow text-center desktop ml2">Work&nbsp;Refined</h1>
+        <h1 class="h0-title text-shadow text-center mobile ml2">Work<br/>Refined</h1>
+    </section>
+    <div class="bb-white"></div>
+    <p class="text-center p2 mt-3 px-3">You can't use up creativity. The more you use, the more you have.</p>
+
+
+    <section class="container" id="section-works">
+
+        <!--=====================================================================-->
+        <!--=========== DESKTOP ============-->
+        <!--=====================================================================-->
+        <div class="desktop">
+            <div class="row grid-projects">
+                <figure>
+                    <a href="https://apparicio.co.uk/aj/" target="_blank">
+                        <div class="grid-4 py-0 relative div-video transition grid-project-1 flex-center hidden">
+                            <video class="video video1" muted loop playsinline>
+                                <source src="video/video-aj-2.mp4" type="video/mp4">
+                            </video>
+
+                            <h6 class="uppercase color-gradient text-shadow" style="position: absolute; top: 36px; z-index: 2;">Dev</h6>
+                            <h5 class="text-center text-shadow" style="position: absolute; bottom: 72px; z-index: 2;">Portfólio AJ</h5>
+                            <h6 class="uppercase color-gradient text-shadow" style="position: absolute; bottom: 36px; z-index: 2;">2023</h6>
+                        </div>
+                    </a>
+                </figure>
+                <figure>
+                    <a href="https://comformaarquitetura.com.br" target="_blank">
+                        <div class="grid-4 py-0 div-video transition grid-project-2 flex-center hidden ">
+                            <video class="video video2" muted loop playsinline>
+                                <source src="video/video-comforma-2.mp4" type="video/mp4">
+                            </video>
+
+                            <h6 class="uppercase color-gradient text-shadow" style="position: absolute; top: 36px; z-index: 2;">Design + Dev</h6>
+                            <h5 class="text-center text-shadow" style="position: absolute; bottom: 72px; z-index: 2;">ComForma Arquitetura</h5>
+                            <h6 class="uppercase color-gradient text-shadow" style="position: absolute; bottom: 36px; z-index: 2;">2024</h6>
+                        </div>
+                    </a>
+                </figure>
+                <figure>
+                    <a href="https://solsten.com.br" target="_blank">
+                        <div class="grid-4 py-0 div-video transition grid-project-3 flex-center hidden">
+                            <video class="video video3" muted loop playsinline>
+                                <source src="video/video-solsten-2.mp4" type="video/mp4">
+                            </video>
+
+                            <h6 class="uppercase color-gradient text-shadow" style="position: absolute; top: 36px; z-index: 2;">Design + Dev</h6>
+                            <h5 class="text-center text-shadow" style="position: absolute; bottom: 72px; z-index: 2;">Solsten Energia Solar</h5>
+                            <h6 class="uppercase color-gradient text-shadow" style="position: absolute; bottom: 36px; z-index: 2;">2024</h6>
+                        </div>
+                    </a>
+                </figure>
+            </div>
+        </div>
+
+        <!--=====================================================================-->
+        <!--=========== MOBILE ============-->
+        <!--=====================================================================-->
+        <div class="mobile">
+            <div class="row">
+                <div class="grid-4">
+                    <div>
+                        <figure>
+                            <div class="card-extended flex-center flex-column w-100 relative hidden">
+                                <img src="img/hero-aj.webp" class="bg-img-card" alt="" />
+                                <h6 class="uppercase color-gradient text-shadow mb-3">Dev</h6>
+                                <img src="img/hero-aj.webp" class="img-card" alt="" /> 
+
+                                <a href="https://apparicio.co.uk/aj/" target="_blank" class="link-card"></a>
+            
+                                <h5 class="mt-3 text-shadow">Portfólio AJ</h5>
+                                <h6 class="uppercase color-gradient text-shadow">2023</h6>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+                <div class="grid-4">
+                    <div>
+                        <figure>
+                        <div class="card-extended flex-center flex-column w-100 relative hidden">
+                            <img src="img/hero-comforma.webp" class="bg-img-card" alt="" />
+                            <h6 class="uppercase color-gradient text-shadow mb-3">UI Design + Dev</h6>
+                            <img src="img/hero-comforma.webp" class="img-card" alt="" /> 
+
+                            <a href="https://comformaarquitetura.com.br" target="_blank" class="link-card"></a>
+        
+                            <h5 class="text-shadow mt-3">ComForma Arquitetura</h5>
+                            <h6 class="uppercase color-gradient text-shadow">2024</h6>
+                        </div>
+                    </figure>
+                </div>
+                <div class="grid-4">
+                    <div>
+                        <figure>
+                            <div class="card-extended flex-center flex-column w-100 relative hidden">
+                                <img src="img/hero-solsten.webp" class="bg-img-card" alt="" />
+                                <h6 class="uppercase color-gradient text-shadow mb-3">UI Design + Dev</h6>
+                                <img src="img/hero-solsten.webp" class="img-card" alt="" /> 
+
+                                <a href="https://solsten.com.br" target="_blank" class="link-card"></a>
+            
+                                <h5 class="text-shadow mt-3">Solsten Energia Solar</h5>
+                                <h6 class="uppercase color-gradient text-shadow">2024</h6>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!--=====================================================================-->
+    <!--=========== SIDE PROJECTS ============-->
+    <!--=====================================================================-->
+    <div class="bb-gray"></div>
+    <section class="container flex-center py-5 relative" id="section-text-sideworks">
+        <div class="square-atari"></div>
+        <h1 class="h0-title ml3">my lab</h1>
+    </section>
+    <div class="bb-gray"></div>
+    <p class="text-center mt-3 px-3">Where I develop concepts and do my experiments...</p>
+
+    <!--=========== DESKTOP ============-->
+    <section class="container" id="section-sideworks">
+        <!--
+        <div class="row">
+            <div class="grid-1"></div>
+            <div class="grid-10">
+                <div class="row">
+                    <div class="grid-5 py-0 ">
+                        <figure>
+                            <div class="div-video transition side-project flex-center hidden">
+                                <video class="video side-video-1" muted loop playsinline>
+                                    <source src="video/video-dhrone-2.mp4" type="video/mp4">
+                                </video>
+        
+                                <h6 class="uppercase color-gradient" style="position: absolute; top: 36px; z-index: 2;">Design + Dev + 3D</h6>
+                                <h5 class="text-center" style="position: absolute; bottom: 72px; z-index: 2;">Dhrone Tech</h5>
+                                <h6 class="uppercase color-gradient" style="position: absolute; bottom: 36px; z-index: 2;">2024</h6>
+                            </div>
+                        </figure>
+                        <figure>
+                            <div class="mt-9 div-video transition side-project flex-center hidden">
+                                <video class="video side-video-2" muted loop playsinline>
+                                    <source src="video/video-angelfish.mp4" type="video/mp4">
+                                </video>
+        
+                                <h6 class="uppercase color-gradient" style="position: absolute; top: 36px; z-index: 2;">Design + Dev + 3D</h6>
+                                <h5 class="text-center" style="position: absolute; bottom: 72px; z-index: 2;">Angel Fish</h5>
+                                <h6 class="uppercase color-gradient" style="position: absolute; bottom: 36px; z-index: 2;">2024</h6>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="grid-2"></div>
+                    <div class="grid-5 py-0 ">
+
+                        <figure>
+                            <div class="mt-9 div-video transition side-project flex-center hidden">
+                                <video class="video side-video-3" muted loop playsinline>
+                                    <source src="video/video-spider.mp4" type="video/mp4">
+                                </video>
+        
+                                <h6 class="uppercase color-gradient" style="position: absolute; top: 36px; z-index: 2;">Design + Dev</h6>
+                                <h5 class="text-center" style="position: absolute; bottom: 72px; z-index: 2;">Spider-man PS4</h5>
+                                <h6 class="uppercase color-gradient" style="position: absolute; bottom: 36px; z-index: 2;">2023</h6>
+                            </div>
+                        </figure>
+
+                        <figure>
+                            <div class="mt-9 div-video transition side-project flex-center hidden">
+                                <video class="video side-video-4" muted loop playsinline>
+                                    <source src="video/video-paybank.mp4" type="video/mp4">
+                                </video>
+        
+                                <h6 class="uppercase color-gradient" style="position: absolute; top: 36px; z-index: 2;">Design + Dev</h6>
+                                <h5 class="text-center" style="position: absolute; bottom: 72px; z-index: 2;">Paybank</h5>
+                                <h6 class="uppercase color-gradient" style="position: absolute; bottom: 36px; z-index: 2;">2023</h6>
+                            </div>
+                        </figure>
+                        
+                    </div>
+    
+                </div>
+            </div>
+            <div class="grid-1"></div>
+        </div>
+        -->
+
+        <div class="row">
+            <div class="grid-1"></div>
+            <div class="grid-10">
+                <div class="row">
+                    <div class="grid-5">
+
+                        <article>
+                            <div class="card flex-center flex-column w-100 relative hidden">
+                                <img src="img/hero-dhrone.webp" class="bg-img-card" alt="" />
+                                <h6 class="uppercase color-gradient text-shadow mb-3">Dev + Design</h6>
+                                <img src="img/hero-dhrone.webp" class="img-card" alt="" /> 
+
+                                <a href="https://nasseryousef.com.br/dhrone" target="_blank" class="link-card"></a>
+                
+                                <h5 class="text-shadow mt-3">Dhrone</h5>
+                                <h6 class="uppercase color-gradient text-shadow">2023</h6>
+                            </div>
+                        </article>
+                        
+            
+                        <article class="mt-9">
+                            <div class="card flex-center flex-column w-100 relative hidden">
+                                <img src="img/hero-paybank.webp" class="bg-img-card" alt="" />
+                                <h6 class="uppercase color-gradient text-shadow mb-3">UI Design + Dev</h6>
+                                <img src="img/hero-paybank.webp" class="img-card" alt="" /> 
+
+                                <a href="https://nasseryousef.com.br/paybank" target="_blank" class="link-card"></a>
+                
+                                <h5 class="text-shadow mt-3">Paybank</h5>
+                                <h6 class="uppercase color-gradient text-shadow">2023</h6>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="grid-2"></div>
+                    <div class="grid-5">
+
+                        <article class="mt-9">
+                            <div class="card flex-center flex-column w-100 relative hidden">
+                                <img src="img/hero-spidermanpeter.webp" class="bg-img-card" alt="" />
+                                <h6 class="uppercase color-gradient text-shadow mb-3">UI Design + Dev</h6>
+                                <img src="img/hero-spidermanpeter.webp" class="img-card" alt="" /> 
+
+                                <a href="https://nasseryousef.com.br/spidermanpeter" target="_blank" class="link-card"></a>
+                
+                                <h5 class="text-shadow mt-3">Spider-man PS4</h5>
+                                <h6 class="uppercase color-gradient text-shadow">2023</h6>
+                            </div>
+                        </article>
+                        
+            
+                        <article class="mt-9">
+                            <div class="card flex-center flex-column w-100 relative hidden">
+                                <img src="img/hero-angelfish.webp" class="bg-img-card" alt="" />
+                                <h6 class="uppercase color-gradient text-shadow mb-3">UI Design + Dev + 3D</h6>
+                                <img src="img/hero-angelfish.webp" class="img-card" alt="" /> 
+
+                                <a href="https://nasseryousef.com.br/angelfish" target="_blank" class="link-card"></a>
+                
+                                <h5 class="text-shadow mt-3">Angel Fish</h5>
+                                <h6 class="uppercase color-gradient text-shadow">2024</h6>
+                            </div>
+                            
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+            <div class="grid-1"></div>
+            </div>
+    </section>
+
+
+
+    
+    
+    <!--<div class="bb-gray"></div>--> <!-- LINE OF SEPARATION -->
+    
+    <!--=====================================================================-->
+    <!--=========== ABOUT ME ============-->
+    <!--=====================================================================-->
+    <div class="bb-gray"></div>
+    <section class="container flex-center py-5 relative" id="section-text-about">
+        <div class="square-atari"></div>
+        <h1 class="h0-title text-center ml4">about me</h1>
+    </section>
+    <div class="bb-gray"></div>
+    
+
+    <div class="mask-video-ny flex-center relative" id="section-video">
+        <video class="" muted loop playsinline autoplay>
+            <source src="video/teaser3.mp4" type="video/mp4">
+        </video>
+
+        <div class="pl-3 flex-center flex-column" style="
+        position: absolute; 
+        left: 50%; 
+        bottom: 0%;
+        z-index: 200;
+        transform: translate(-50%, -50%);
+        ">
+            <div class="flex-start-row">
+                <img src="svg/icon-stamp.svg" class="icon w-auto" alt="" onload="SVGInject(this)" />
+                <img src="svg/signature-ny.svg" class="icon-xl signature ml-1" style="transform: translate3d(0,12px,0);" alt="" onload="SVGInject(this)" />
+            </div>
+            
+            <h6 class="uppercase label-transparent-white">that's me</h6>
+            <h2 class="text-center text-shadow mt-1">Násser Yousef Ali</h2>
+        </div>
+        
+    </div>
+
+    <section class="container pt-0" id="section-about">
+        <div class="row">
+            <div class="grid-4">
+                <blockquote>
+                    <h6 class="uppercase label-transparent-white">resume</h6>
+                    <h5 class="mt-2">
+                        Front-End Developer & UI Motion Expert with 10+ years of experience 
+                        in product development, building refined interfaces and motion-driven 
+                        experiences that stand out for creativity and performance.
+                    </h5>
+
+                    <div class="mt-4 flex-start-row">
+                        <a href="https://www.linkedin.com/in/n%C3%A1sser-yousef-ali-1742101a5/" target="_blank" class="bg-icon mr-1 tooltip" data-tooltip="LinkedIn">
+                            <img src="svg/icon-linkedin.svg" class="icon-xs" alt="" onload="SVGInject(this)" />
+                        </a>
+
+                        <a href="https://github.com/nyousefali" target="_blank" class="bg-icon mr-1 tooltip" data-tooltip="GitHub">
+                            <img src="svg/icon-github.svg" class="icon-xs" alt="" onload="SVGInject(this)" />
+                        </a>
+
+                        <a href="https://www.instagram.com/nasseryousef__/" target="_blank" class="bg-icon mr-1 tooltip" data-tooltip="Instagram">
+                            <img src="svg/icon-instagram.svg" class="icon-xs" alt="" onload="SVGInject(this)" />
+                        </a>
+
+                        <a href="https://www.youtube.com/channel/UCiHkIXtKHLHbyBs352UI6QQ" target="_blank" class="bg-icon mr-1 tooltip" data-tooltip="YouTube Channel">
+                            <img src="svg/icon-youtube.svg" class="icon-xs" alt="" onload="SVGInject(this)" />
+                        </a>
+
+                        <a href="pdf/ResumeNasserv2.pdf" target="_blank" class="bg-icon mr-1 tooltip" data-tooltip="My Resume">
+                            <img src="svg/icon-paper-1.svg" class="icon-xs" alt="" onload="SVGInject(this)" />
+                        </a>
+                    </div>
+                </blockquote>
+
+                <blockquote class="div-photo hidden my-4"></blockquote>
+
+                <blockquote>
+                    <img src="svg/icon-asterisco.svg" class="icon-s icon-rotate" alt="" onload="SVGInject(this)" />
+                    <h4>Less is more.</h4>
+                    <p class="p2 color-gray">Because clarity moves faster than noise.</p>
+                </blockquote>
+                
+                
+            </div>
+            <div class="grid-4 ">
+                <blockquote>
+                    <h6 class="uppercase label-transparent-white">experience</h6>
+
+                    <div class="row py-0 mt-2 hover-padding bb-gray">
+                        <div class="grid-nobreak-4 py-0">
+                            <h6 class="uppercase color-gray h8">2020-now</h6>
+                        </div>
+                        <div class="grid-nobreak-8 py-0">
+                            <h6>
+                                Founder & Instructor
+                            </h6>
+                            <h6 class="color-gray">Front-End Trainings</h6>
+                        </div>
+                    </div>
+
+                    <div class="row py-0 hover-padding bb-gray">
+                        <div class="grid-nobreak-4 py-0">
+                            <h6 class="uppercase color-gray h8">2018-now</h6>
+                        </div>
+                        <div class="grid-nobreak-8 py-0">
+                            <h6>
+                                Freelancer
+                            </h6>
+                            <h6 class="color-gray">UI Design & Development</h6>
+                        </div>
+                    </div>
+
+                    <div class="row py-0 hover-padding bb-gray">
+                        <div class="grid-nobreak-4 py-0">
+                            <h6 class="uppercase color-gray h8">2021-now</h6>
+                        </div>
+                        <div class="grid-nobreak-8 py-0">
+                            <h6>
+                                Developer & Mentor
+                            </h6>
+                            <h6 class="color-gray">at Design Circuit Academy</h6>
+                        </div>
+                    </div>
+
+                    <div class="row py-0 hover-padding bb-gray">
+                        <div class="grid-nobreak-4 py-0">
+                            <h6 class="uppercase color-gray h8">2025</h6>
+                        </div>
+                        <div class="grid-nobreak-8 py-0">
+                            <h6>
+                                Brand Designer
+                            </h6>
+                            <h6 class="color-gray">at Prooven Agency</h6>
+                        </div>
+                    </div>
+
+                    <div class="row py-0 hover-padding bb-gray">
+                        <div class="grid-nobreak-4 py-0">
+                            <h6 class="uppercase color-gray h8">2018-2022</h6>
+                        </div>
+                        <div class="grid-nobreak-8 py-0">
+                            <h6>
+                                Full Stack Developer
+                            </h6>
+                            <h6 class="color-gray">at UnB</h6>
+                        </div>
+                    </div>
+                </blockquote>
+                
+                <blockquote class="hidden mt-6">
+                    <h6 class="uppercase label-transparent-white mt-1 ml-1">skills</h6>
+
+                    <div class="flex-center flex-column mt-2">
+                        <h3 class="expertise-motion" >Motion Design</h3>
+                        <h3 class="expertise-frontend">Front-End</h3>
+                        <h3 class="expertise-ui">UX/UI</h3>
+                        <h3 class="expertise-ux">Craft</h3>
+                        <h3 class="expertise-experience">Experience</h3>
+                        <h3 class="expertise-creativity">Creativity</h3>
+                        <h3 class="expertise-filmmaker">Filmmaker</h3>
+                    </div>
+                    
+                </blockquote>
+            </div>
+            <div class="grid-4">
+                <blockquote>
+                    <h6 class="uppercase label-transparent-white">education</h6>
+
+                    <div class="row py-0 mt-2 hover-padding bb-gray">
+                        <div class="grid-nobreak-4 py-0">
+                            <h6 class="uppercase color-gray h8">2011-2012</h6>
+                        </div>
+                        <div class="grid-nobreak-8 py-0">
+                            <h6>
+                                Computer Technician
+                            </h6>
+                            <h6 class="color-gray">ETC (Ceilândia Technical School)</h6>
+                        </div>
+                    </div>
+
+                    <div class="row py-0 hover-padding bb-gray">
+                        <div class="grid-nobreak-4 py-0">
+                            <h6 class="uppercase color-gray h8">2013-2018</h6>
+                        </div>
+                        <div class="grid-nobreak-8 py-0">
+                            <h6>
+                                Electronics Engineer with an emphasis on Software.
+                            </h6>
+                            <h6 class="color-gray">UnB (University of Brasília)</h6>
+                        </div>
+                    </div>
+
+                    <div class="row py-0 hover-padding bb-gray">
+                        <div class="grid-nobreak-4 py-0">
+                            <h6 class="uppercase color-gray h8">2019-2020</h6>
+                        </div>
+                        <div class="grid-nobreak-8 py-0">
+                            <h6>
+                                UX/UI Design
+                            </h6>
+                            <h6 class="color-gray">Design Circuit Academy</h6>
+                        </div>
+                    </div>
+
+                    <div class="row py-0 hover-padding bb-gray">
+                        <div class="grid-nobreak-4 py-0">
+                            <h6 class="uppercase color-gray h8">2020-2021</h6>
+                        </div>
+                        <div class="grid-nobreak-8 py-0">
+                            <h6>
+                                UX/UI Design
+                            </h6>
+                            <h6 class="color-gray">UI Expert</h6>
+                        </div>
+                    </div>
+
+                    <div class="row py-0 hover-padding bb-gray">
+                        <div class="grid-nobreak-4 py-0">
+                            <h6 class="uppercase color-gray h8">2020-2021</h6>
+                        </div>
+                        <div class="grid-nobreak-8 py-0">
+                            <h6>
+                                Web Design
+                            </h6>
+                            <h6 class="color-gray">Design FullTime</h6>
+                        </div>
+                    </div>
+                </blockquote>
+
+                <blockquote class="mt-6">
+                    <h6 class="uppercase label-transparent-white">techs & Tools</h6>
+
+                    <div class="row">
+                        <div class="grid-nobreak-3 flex-center flex-column ">
+                            <a href="https://code.visualstudio.com/" target="_blank" class="tooltip" data-tooltip="VsCode">
+                                <div class=" mb-2">
+                                    <img src="svg/app-vscode.svg" class="icon-app " onload="SVGInject(this)" alt="" />
+                                </div>
+                            </a>
+                            <a href="https://www.w3schools.com/" target="_blank" class="tooltip" data-tooltip="HTML 5">
+                                <div class=" mb-2">
+                                    <img src="svg/app-html.svg" class="icon-app" onload="SVGInject(this)" alt="" />
+                                </div>
+                            </a>
+                            <a href="https://www.w3schools.com/" target="_blank" class="tooltip" data-tooltip="CSS 3">
+                                <div class=" mb-2">
+                                    <img src="svg/app-css.svg" class="icon-app" onload="SVGInject(this)" alt="" />
+                                </div>
+                            </a>
+                            <a href="https://www.w3schools.com/" target="_blank" class="tooltip" data-tooltip="JS ES6+">
+                                <div class=" mb-2">
+                                    <img src="svg/app-js.svg" class="icon-app" onload="SVGInject(this)" alt="" />
+                                </div>
+                            </a>
+                            <a href="https://www.mysql.com/" target="_blank" class="tooltip" data-tooltip="MySQL">
+                                <div class=" mb-2">
+                                    <img src="svg/app-mysql.svg" class="icon-app" onload="SVGInject(this)" alt="" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="grid-nobreak-3 flex-center flex-column">
+                            <a href="https://sass-lang.com/" target="_blank" class="tooltip" data-tooltip="SASS">
+                                <div class=" mb-2">
+                                    <img src="svg/app-sass.svg" class="icon-app" onload="SVGInject(this)" alt="" />
+                                </div>
+                            </a>
+                            <a href="https://gsap.com/" target="_blank" class="tooltip" data-tooltip="GSAP">
+                                <div class=" mb-2">
+                                    <img src="svg/app-gsap.svg" class="icon-app" onload="SVGInject(this)"  alt="" />
+                                </div>
+                            </a>
+                            <a href="https://barba.js.org/" target="_blank" class="tooltip" data-tooltip="Barba.js">
+                                <div class="mb-2">
+                                    <img src="svg/app-barbajs.svg" class="icon-app" onload="SVGInject(this)" alt="" />
+                                </div>
+                            </a>
+                            <a href="https://pt-br.legacy.reactjs.org/" target="_blank" class="tooltip" data-tooltip="React.js">
+                                <div class="mb-2">
+                                    <img src="svg/app-reactjs.svg" class="icon-app" onload="SVGInject(this)" alt="" />
+                                </div>
+                            </a>
+                            <a href="https://github.com/?locale=pt-BR" target="_blank" class="tooltip" data-tooltip="GitHub">
+                                <div class=" mb-2">
+                                    <img src="svg/app-github.svg" class="icon-app" onload="SVGInject(this)" alt="" />
+                                </div>
+                            </a>
+                            
+                            
+                        </div>
+                        <div class="grid-nobreak-3 flex-center flex-column">
+                            <a href="https://spline.design/" target="_blank" class="tooltip" data-tooltip="Spline Tool">
+                                <div class="mb-2">
+                                    <img src="svg/app-spline.svg" class="icon-app" onload="SVGInject(this)" alt="" />
+                                </div>
+                            </a>
+                            <a href="https://www.php.net/releases/8.0/pt_BR.php" target="_blank" class="tooltip" data-tooltip="PHP 8">
+                                <div class="mb-2">
+                                    <img src="svg/app-php.svg" class="icon-app" onload="SVGInject(this)" alt="" />
+                                </div>
+                            </a>
+                            <a href="https://chat.openai.com/" target="_blank" class="tooltip" data-tooltip="Chat GPT">
+                                <div class="mb-2">
+                                    <img src="svg/app-chatgpt.svg" class="icon-app" onload="SVGInject(this)" alt="" />
+                                </div>
+                            </a>
+                            <a href="https://www.figma.com/" target="_blank" class="tooltip" data-tooltip="Figma">
+                                <div class="mb-2">
+                                    <img src="svg/app-figma.svg" class="icon-app" onload="SVGInject(this)" alt="" />
+                                </div>
+                            </a>
+                            <a href="https://discord.com/" target="_blank" class="tooltip" data-tooltip="Discord">
+                                <div class="mb-2">
+                                    <img src="svg/app-discord.svg" class="icon-app" onload="SVGInject(this)" alt="" />
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="grid-nobreak-3 flex-center flex-column">
+                            <a href="https://www.adobe.com/br/products/premiere.html" target="_blank" class="tooltip" data-tooltip="Adobe Premiere">
+                                <div class="mb-2">
+                                    <img src="svg/app-premiere.svg" class="icon-app" onload="SVGInject(this)" alt="" />
+                                </div>
+                            </a>
+                            <a href="https://www.capcut.com/pt-br/" target="_blank" class="tooltip" data-tooltip="CapCut">
+                                <div class="mb-2">
+                                    <img src="svg/app-capcut.svg" class="icon-app" onload="SVGInject(this)" alt="" />
+                                </div>
+                            </a>
+                            <a href="https://open.spotify.com/intl-pt" target="_blank" class="tooltip" data-tooltip="Spotify">
+                                <div class="mb-2">
+                                    <img src="svg/app-spotify.svg"  class="icon-app" onload="SVGInject(this)" alt="" />
+                                </div>
+                            </a>
+                            <a href="https://www.midjourney.com/home" target="_blank" class="tooltip" data-tooltip="MidJourney">
+                                <div class="mb-2">
+                                    <img src="svg/app-midjourney.svg"  class="icon-app" onload="SVGInject(this)" alt="" />
+                                </div>
+                            </a>
+                            <a href="https://animejs.com/" target="_blank" class="tooltip" data-tooltip="Anime.js">
+                                <div class="mb-2">
+                                    <img src="svg/app-animejs.svg"  class="icon-app" onload="SVGInject(this)" alt="" />
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </blockquote>
+            </div>
+        </div>
+
+    </section>
+
+
+        <!--=====================================================================-->
+    <!--=========== MY TRAININGS ============-->
+    <!--=====================================================================-->
+    <div class="bb-gray"></div>
+    <section class="container flex-center py-5 relative" id="section-training">
+        <div class="square-atari"></div>
+        <h1 class="h0-title text-shadow text-center ml5">trainings</h1>
+    </section>
+    <div class="bb-gray"></div>
+    <p class="text-center mt-3 p2">Little bit about my trainings...</p>
+    
+    <section class="container pt-4 pb-9" id="section-div-training">
+        <div class="row">
+            <div class="grid-4">
+
+                <blockquote>
+                    <a href="https://frontpush.com.br" target="_blank" class="tooltip" data-tooltip="FrontPUSH 4.0">
+                        <img src="svg/app-frontpush.svg" class=" icon-m" onload="SVGInject(this)" alt="" />
+                    </a>
+                    
+                    <div>
+                        <h6 class="uppercase color-gradient2 mt-2">front-end</h6>
+                    </div>
+                    
+                    <a href="https://frontpush.com.br" target="_blank">
+                        <h4 class="mt-1">FrontPUSH 4.0</h4>
+                    </a>
+                    <p class="mt-2 pr-2">
+                        FrontPUSH is an online course to develop skills in 
+                        designing and developing web interfaces with the 
+                        latest technologies, while balancing design, 
+                        functionality and motion. Learn to create out-of-the-box 
+                        web interfaces with theoretical and practical content.
+                    </p>
+                </blockquote>
+                
+            </div>
+            <div class="grid-4">
+
+                <blockquote>
+                    <a href="https://infusionpush.com.br" target="_blank" class="tooltip" data-tooltip="InfusionPUSH">
+                        <img src="svg/app-infusionpush.svg"  class="icon-m" onload="SVGInject(this)" alt="" />
+                    </a>
+                    
+                    <div>
+                        <h6 class="uppercase color-gradient-infusionpush mt-2">animation & interactivity</h6>
+                    </div>
+                    
+                    <a href="https://infusionpush.com.br" target="_blank">
+                        <h4 class="mt-1">InfusionPUSH</h4>
+                    </a>
+                    
+                    <p class="mt-2 pr-2">
+                        InfusionPUSH is a subscription-based course for 
+                        professionals who already master front-end. Get 
+                        weekly templates with advanced animations using GSAP, 
+                        Anime.js, Lenis, and Barba.js — and create smooth, 
+                        modern, and dynamic web experiences.
+                    </p>
+                </blockquote>
+                
+            </div>
+            <div class="grid-4">
+                <blockquote>
+                    <a href="https://axlepush.com.br" target="_blank" class="tooltip" data-tooltip="AxlePUSH 2.0">
+                        <img src="svg/app-axlepush.svg"  class="icon-m" onload="SVGInject(this)" alt="" />
+                    </a>
+                    
+                    <div>
+                        <h6 class="uppercase color-gradient-axlepush mt-2">animations 3d for web</h6>
+                    </div>
+                    
+                    <a href="https://axlepush.com.br" target="_blank">
+                        <h4 class="mt-1">AxlePUSH 2.0</h4>
+                    </a>
+                    <p class="mt-2 pr-2">
+                        AxlePUSH is an online course aimed at creating 3D assets for web 
+                        projects. In this course, we use the Spline tool, where you will 
+                        be able to create objects, interactions, animations, scenes, 
+                        materials and everything else. 
+                    </p>
+                </blockquote>
+                
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!--=============================================-->
+    <!--=========== PRESENTATION 3D ============-->
+    <!--=============================================-->
+    <section class="container relative">
+
+        <h2 class="text1-3d text-center text-shadow">So</h2>
+        <h2 class="text2-3d text-center text-shadow">Meet your next creative developer</h2>
+        <h2 class="text3-3d text-center text-shadow">I'm a pixel perfectionist</h2>
+        <h2 class="text4-3d text-center text-shadow">I love bringing design to life</h2>
+        <h2 class="text5-3d text-center text-shadow">Be in 2D</h2>
+        <h2 class="text6-3d text-center text-shadow">or 3D</h2>
+        <h2 class="text7-3d text-center"></h2>
+    
+        <div class="square-animation"></div>
+    
+    </section>
+
+
+
+
+
+
+    <!--=====================================================================-->
+    <!--=========== KEEP IN TOUCH ============-->
+    <!--=====================================================================-->
+<div class="bb-gray"></div>
+    <section class="container py-9 relative section-cta flex-center" id="section-letsconnect">
+
+        <div class="bg-liquid">
+
+            <!--<script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.57/build/spline-viewer.js"></script>-->
+            <!--<spline-viewer url="https://prod.spline.design/Emykq1-kNxcFKUCR/scene.splinecode"></spline-viewer>-->
+
+            <spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/psbsaEN79ehywON8/scene.splinecode"></spline-viewer>
+        
+        </div>
+        
+        <div class="row">
+            <div class=" flex-center flex-column">
+                <div class="">
+                    <a href="https://instagram.com/nasseryousef__" target="_blank" class="tooltip" data-tooltip="Instagram">
+                        <img src="svg/ny7.webp" class="profile" alt="" onload="SVGInject(this)" />
+                    </a>
+                </div>
+                <div>
+                    <a href="https://instagram.com/nasseryousef__" target="_blank" class="tooltip" data-tooltip="Instagram">
+                        <h6>@nasseryousef__</h6>
+                    </a>
+                </div>
+                <div class=" mt-3">
+                    <h6 class="uppercase label-transparent-white">thank you</h6>
+                </div>
+                <div>
+                    <h1 class="h0-title text-shadow text-center mt-2 ml6">let's connect</h1>
+                </div>
+                
+                <div class="flex-center flex-column">
+                    <div class="flex-start-row mt-1">
+                        <div class="light-orange"></div>
+                        <div>
+                            <a href="#" class="tooltip" data-tooltip="Freelance Availibility"> 
+                                <h5 class="color-orange text-shadow ml-1">Limited Hours...</h5>
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="flex-start-column mt-4 label-transparent-white-big">
+                    <a href="mailto:hi@nasseryousef.com.br" class="tooltip" data-tooltip="Send me a e-mail">
+                        <h3 class="color-white text-shadow">hi@nasseryousef.com.br</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<div class="bb-gray"></div>
+
+
+
+
+
+
+
+    <!--=====================================================================-->
+    <!--=========== LINKS ============-->
+    <!--=====================================================================-->
+    <section class="container" id="section-links">
+        <div class="row">
+            <div class="grid-3 flex-start-row">
+                <img src="svg/icon-instagram.svg" class="icon-s mx-1" alt="" onload="SVGInject(this)">
+                <a href="https://www.instagram.com/nasseryousef__/" class="link-external" target="_blank">Instagram</a>
+                <img src="svg/icon-link.svg" class="icon-s px-1" alt="" onload="SVGInject(this)">
+            </div>
+            <div class="grid-3 flex-start-row">
+                <img src="svg/icon-dribbble.svg" class="icon-s mx-1" alt="" onload="SVGInject(this)">
+                <a href="https://dribbble.com/nyousefali" class="link-external" target="_blank">Dribbble</a>
+                <img src="svg/icon-link.svg" class="icon-s px-1" alt="" onload="SVGInject(this)">
+            </div>
+            <div class="grid-3 flex-start-row">
+                <img src="svg/icon-behance.svg" class="icon-s mx-1" alt="" onload="SVGInject(this)">
+                <a href="https://www.behance.net/nyousefali" class="link-external" target="_blank">Behance</a>
+                <img src="svg/icon-link.svg" class="icon-s pr-2" alt="" onload="SVGInject(this)">
+            </div>
+            <div class="grid-3 flex-start-row">
+                <img src="svg/icon-paper.svg" class="icon-s mx-1" alt="" onload="SVGInject(this)">
+                <a href="pdf/ResumeNasserv2.pdf" class="link-external" target="_blank">Resume.pdf</a>
+                <img src="svg/icon-link.svg" class="icon-s pr-2" alt="" onload="SVGInject(this)">
+            </div>
+        </div>
+        <div class="row">
+            <div class="grid-3 flex-start-row">
+                <img src="svg/icon-codepen.svg" class="icon-s mx-1" alt="" onload="SVGInject(this)">
+                <a href="https://www.codepen.io/nyousefali" class="link-external" target="_blank">Codepen</a>
+                <img src="svg/icon-link.svg" class="icon-s px-1" alt="" onload="SVGInject(this)">
+            </div>
+            <div class="grid-3 flex-start-row">
+                <img src="svg/icon-github.svg" class="icon-s mx-1" alt="" onload="SVGInject(this)">
+                <a href="https://github.com/nyousefali" class="link-external" target="_blank">Github</a>
+                <img src="svg/icon-link.svg" class="icon-s px-1" alt="" onload="SVGInject(this)">
+            </div>
+            <div class="grid-3 flex-start-row">
+                <img src="svg/icon-linkedin.svg" class="icon-s mx-1" alt="" onload="SVGInject(this)">
+                <a href="https://www.linkedin.com/in/n%C3%A1sser-yousef-ali-1742101a5/" class="link-external" target="_blank">Linkedin</a>
+                <img src="svg/icon-link.svg" class="icon-s px-1" alt="" onload="SVGInject(this)">
+            </div>
+            <div class="grid-3 flex-start-row">
+                <img src="svg/icon-youtube.svg" class="icon-s mx-1" alt="" onload="SVGInject(this)">
+                <a href="https://www.youtube.com/channel/UCiHkIXtKHLHbyBs352UI6QQ" class="link-external" target="_blank">YouTube</a>
+                <img src="svg/icon-link.svg" class="icon-s px-1" alt="" onload="SVGInject(this)">
+            </div>
+        </div>
+    </section>
+
+    <div class="bb-gray"></div>
+
+    <!--================================-->
+    <!--============ FOOTER ============-->
+    <!--================================-->
+    <footer class="container py-3">
+        <div class="row">
+            <div class="grid-3">
+                <div class="flex-start-row">
+                    <h5>Násser Yousef Ali</h5>
+                    <img src="svg/logo-ny2.svg" class="icon-s ml-1" alt="" onload="SVGInject(this)" >
+                </div>
+                <div>
+                    <p>Todos os direitos reservados®</p>
+                </div>
+                
+            </div>
+            <div class="grid-3">
+                <p>
+                    Portfolio Nasser Yousef Ali ® 2025
+                    <br/>
+                    by: Násser Yousef Ali
+                    <br/>
+                    Project NY • CNPJ 40.335.962/0001-16
+                </p>
+            </div>
+            <div class="grid-2 flex-center">
+                
+            </div>
+            <div class="grid-4 flex-center">
+
+                <a href="https://www.linkedin.com/in/n%C3%A1sser-yousef-ali-1742101a5/" target="_blank" class="bg-icon mr-1 tooltip" data-tooltip="LinkedIn">
+                    <img src="svg/icon-linkedin.svg" class="icon-xs" alt="" onload="SVGInject(this)" />
+                </a>
+
+                <a href="https://github.com/nyousefali" target="_blank" class="bg-icon mr-1 tooltip"  data-tooltip="GitHub">
+                    <img src="svg/icon-github.svg" class="icon-xs" alt="" onload="SVGInject(this)" />
+                </a>
+
+                <a href="https://www.instagram.com/nasseryousef__/" target="_blank" class="bg-icon mr-1 tooltip"  data-tooltip="Instagram">
+                    <img src="svg/icon-instagram.svg" class="icon-xs" alt="" onload="SVGInject(this)" />
+                </a>
+
+                <a href="https://www.youtube.com/channel/UCiHkIXtKHLHbyBs352UI6QQ" target="_blank" class="bg-icon mr-1 tooltip"  data-tooltip="YouTube Channel">
+                    <img src="svg/icon-youtube.svg" class="icon-xs" alt="" onload="SVGInject(this)" />
+                </a>
+
+
+
+            </div>
+        </div>
+    </footer>
+    
+
+    <!--=========== JS ============-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js" integrity="sha512-v8B8T8l8JiiJRGomPd2k+bPS98RWBLGChFMJbK1hmHiDHYq0EjdQl20LyWeIs+MGRLTWBycJGEGAjKkEtd7w5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js" integrity="sha256-gEBHwdk5lzaYO7ONWoQflv63Q/RqUJCiUu3iyhv+Hxk=" crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+
+
+</body>
+</html>

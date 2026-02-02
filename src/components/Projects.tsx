@@ -76,7 +76,7 @@ const Projects = () => {
         </div>
 
         <p className="text-xl text-foreground-muted max-w-2xl mx-auto">
-          Alguns dos principais projetos que desenvolvi e implementei
+          Alguns dos principais projetos desenvolvidos e implementados
         </p>
       </motion.div>
     );

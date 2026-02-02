@@ -58,7 +58,7 @@ const Projects = () => {
   );
 };
 
-// Project Card Component with Nasser Ali inspired Motion Design
+// Project Card Component - Nasser Ali Style: Clean, Centered, Always Visible
 const ProjectCard = ({ project, index }: { project: any; index: number }) => {
   const cardRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
@@ -69,12 +69,8 @@ const ProjectCard = ({ project, index }: { project: any; index: number }) => {
 
   // Spring physics for smooth transformations
   const springConfig = { stiffness: 150, damping: 20 };
-  const rotateX = useSpring(useTransform(mouseY, [0, 1], [8, -8]), springConfig);
-  const rotateY = useSpring(useTransform(mouseX, [0, 1], [-8, 8]), springConfig);
-
-  // Parallax for image (opposite direction)
-  const imageX = useSpring(useTransform(mouseX, [0, 1], [15, -15]), springConfig);
-  const imageY = useSpring(useTransform(mouseY, [0, 1], [15, -15]), springConfig);
+  const rotateX = useSpring(useTransform(mouseY, [0, 1], [5, -5]), springConfig);
+  const rotateY = useSpring(useTransform(mouseX, [0, 1], [-5, 5]), springConfig);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!cardRef.current) return;
@@ -93,11 +89,8 @@ const ProjectCard = ({ project, index }: { project: any; index: number }) => {
     setIsHovered(false);
   };
 
-  // Stagger delay for content reveal
-  const getStaggerDelay = (itemIndex: number) => itemIndex * 0.08;
-
   return (
-    <motion.div
+    <motion.article
       ref={cardRef}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -116,122 +109,101 @@ const ProjectCard = ({ project, index }: { project: any; index: number }) => {
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={handleMouseLeave}
-      className="relative group perspective-1000"
+      className="relative group h-full"
     >
-      {/* Enhanced Glassmorphism Card */}
-      <div className="relative bg-background/20 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden h-full transition-all duration-500 hover:border-white/20 hover:shadow-2xl hover:shadow-primary/5">
+      {/* Card Container with fixed height - Nasser Style */}
+      <div className="relative bg-background/5 backdrop-blur-md border border-white/5 rounded-3xl overflow-hidden transition-all duration-500 hover:border-white/15 hover:shadow-2xl hover:shadow-primary/10 flex flex-col h-[520px]">
 
-        {/* Image Container with Parallax */}
-        <div className="relative h-64 overflow-hidden">
+        {/* Image Section - ~60% of card height */}
+        <div className="relative h-[60%] overflow-hidden flex items-center justify-center p-6">
+          {/* Background image - blurred */}
+          <div className="absolute inset-0">
+            <img
+              src={project.image}
+              alt=""
+              className="w-full h-full object-cover blur-sm opacity-40"
+            />
+            {/* Color Gradient Overlay */}
+            <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-60`}></div>
+            <div className="absolute inset-0 bg-background/60"></div>
+          </div>
+
+          {/* Main image - centered and elevated */}
           <motion.div
-            style={{
-              x: imageX,
-              y: imageY,
+            animate={{
+              scale: isHovered ? 1.05 : 1,
+              y: isHovered ? -10 : 0
             }}
-            className="w-full h-full"
+            transition={{ type: "spring", stiffness: 150, damping: 20 }}
+            className="relative z-10 w-[85%] h-[85%] rounded-2xl overflow-hidden shadow-2xl"
           >
-            {/* Image with scale(1.2) base */}
-            <motion.img
+            <img
               src={project.image}
               alt={project.title}
               loading="lazy"
               className="w-full h-full object-cover"
-              style={{ scale: 1.2 }}
-              animate={{
-                filter: isHovered ? "brightness(1.15) saturate(1.2)" : "brightness(1) saturate(0.95)"
-              }}
-              transition={{ type: "spring", stiffness: 150, damping: 20 }}
             />
           </motion.div>
 
-          {/* Subtle gradient overlay */}
-          <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-40`}></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent"></div>
-        </div>
-
-        {/* Content Section */}
-        <div className="relative p-6 space-y-4">
-          {/* Title - Always visible, moves up on hover */}
-          <motion.h3
+          {/* Category Label - Top Center */}
+          <motion.div
             animate={{
-              y: isHovered ? -8 : 0
+              opacity: isHovered ? 1 : 0.7,
+              y: isHovered ? 0 : 5
             }}
             transition={{ type: "spring", stiffness: 150, damping: 20 }}
-            className="text-2xl font-bold text-foreground leading-tight relative z-10"
+            className="absolute top-6 left-0 right-0 flex justify-center z-20"
           >
-            {project.title}
-          </motion.h3>
 
-          {/* Description - Hidden by default, revealed on hover */}
-          <motion.p
-            initial={{ opacity: 0, height: 0 }}
-            animate={{
-              opacity: isHovered ? 1 : 0,
-              height: isHovered ? "auto" : 0,
-              y: isHovered ? 0 : 10
-            }}
-            transition={{
-              type: "spring",
-              stiffness: 150,
-              damping: 20,
-              delay: getStaggerDelay(0)
-            }}
-            className="text-foreground-muted leading-relaxed text-sm overflow-hidden"
-          >
-            {project.description}
-          </motion.p>
+          </motion.div>
+        </div>
 
-          {/* Technologies - Hidden by default, revealed on hover with stagger */}
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{
-              opacity: isHovered ? 1 : 0,
-              height: isHovered ? "auto" : 0
-            }}
-            transition={{
-              type: "spring",
-              stiffness: 150,
-              damping: 20,
-              delay: getStaggerDelay(1)
-            }}
-            className="flex flex-wrap gap-2 overflow-hidden"
-          >
-            {project.technologies.map((tech: string, idx: number) => (
+        {/* Content Section - ~40% of card, always visible */}
+        <div className="relative flex-1 p-6 flex flex-col justify-between bg-gradient-to-t from-background via-background/95 to-background/80">
+          <div>
+            {/* Title - Always visible */}
+            <h3 className="text-xl font-bold text-foreground leading-tight tracking-wide mb-2">
+              {project.title}
+            </h3>
+
+            {/* Description - Fades in on hover */}
+            <motion.p
+              animate={{
+                opacity: isHovered ? 1 : 0,
+                height: isHovered ? "auto" : 0
+              }}
+              transition={{ type: "spring", stiffness: 150, damping: 20 }}
+              className="text-foreground-muted text-xs leading-relaxed overflow-hidden mb-3"
+            >
+              {project.description}
+            </motion.p>
+          </div>
+
+          {/* Technologies Tags - Always partially visible */}
+          <div className="flex flex-wrap gap-2 mb-3">
+            {project.technologies.slice(0, 3).map((tech: string) => (
               <motion.span
                 key={tech}
-                initial={{ opacity: 0, scale: 0.8 }}
                 animate={{
-                  opacity: isHovered ? 1 : 0,
-                  scale: isHovered ? 1 : 0.8
+                  opacity: isHovered ? 1 : 0.6,
+                  scale: isHovered ? 1 : 0.95
                 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 150,
-                  damping: 20,
-                  delay: getStaggerDelay(1) + (idx * 0.05)
-                }}
-                className="skill-tag px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20"
+                transition={{ type: "spring", stiffness: 150, damping: 20 }}
+                className="px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20"
               >
                 {tech}
               </motion.span>
             ))}
-          </motion.div>
+          </div>
 
-          {/* Buttons - Hidden by default, revealed on hover */}
+          {/* Buttons - Fade in on hover */}
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
             animate={{
               opacity: isHovered ? 1 : 0,
-              height: isHovered ? "auto" : 0,
               y: isHovered ? 0 : 10
             }}
-            transition={{
-              type: "spring",
-              stiffness: 150,
-              damping: 20,
-              delay: getStaggerDelay(2)
-            }}
-            className="flex gap-4 pt-2 overflow-hidden"
+            transition={{ type: "spring", stiffness: 150, damping: 20, delay: 0.05 }}
+            className="flex gap-3"
           >
             <motion.button
               whileHover={{ scale: 1.1 }}
@@ -240,8 +212,7 @@ const ProjectCard = ({ project, index }: { project: any; index: number }) => {
               className="relative group/btn p-3 rounded-full bg-primary/10 border border-primary/30 hover:bg-primary/20 transition-all duration-300"
               aria-label="Ver Demo"
             >
-              <ExternalLink className="h-5 w-5 text-primary" />
-              {/* Enhanced glow effect */}
+              <ExternalLink className="h-4 w-4 text-primary" />
               <div className="absolute inset-0 rounded-full bg-primary/30 blur-xl opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500 -z-10"></div>
             </motion.button>
 
@@ -252,8 +223,7 @@ const ProjectCard = ({ project, index }: { project: any; index: number }) => {
               className="relative group/btn p-3 rounded-full bg-foreground/5 border border-foreground/20 hover:bg-foreground/10 transition-all duration-300"
               aria-label="Ver Código"
             >
-              <Github className="h-5 w-5 text-foreground" />
-              {/* Enhanced glow effect */}
+              <Github className="h-4 w-4 text-foreground" />
               <div className="absolute inset-0 rounded-full bg-foreground/20 blur-xl opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500 -z-10"></div>
             </motion.button>
           </motion.div>
@@ -261,8 +231,8 @@ const ProjectCard = ({ project, index }: { project: any; index: number }) => {
       </div>
 
       {/* Subtle outer glow on hover */}
-      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-2xl"></div>
-    </motion.div>
+      <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-2xl"></div>
+    </motion.article>
   );
 };
 

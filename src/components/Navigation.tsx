@@ -10,7 +10,7 @@ const Navigation = () => {
     { id: "hero", label: "Início", icon: Home },
     { id: "sobre", label: "Sobre", icon: User },
     { id: "habilidades", label: "Habilidades", icon: Code },
-    { id: "projetos", label: "Projetos", icon: Briefcase },
+    { id: "projects", label: "Projetos", icon: Briefcase },
     { id: "contato", label: "Contato", icon: Mail },
   ];
 
@@ -60,11 +60,10 @@ const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`flex items-center space-x-2 px-3 py-2 rounded-full transition-all duration-300 ${
-                  activeSection === item.id
+                className={`flex items-center space-x-2 px-3 py-2 rounded-full transition-all duration-300 ${activeSection === item.id
                     ? "bg-primary text-primary-foreground"
                     : "text-foreground-muted hover:text-foreground hover:bg-primary/10"
-                }`}
+                  }`}
               >
                 <item.icon className="h-4 w-4" />
                 <span className="text-sm font-medium">{item.label}</span>
@@ -92,11 +91,10 @@ const Navigation = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`flex items-center space-x-4 px-6 py-4 rounded-2xl transition-all duration-300 ${
-                    activeSection === item.id
+                  className={`flex items-center space-x-4 px-6 py-4 rounded-2xl transition-all duration-300 ${activeSection === item.id
                       ? "bg-primary text-primary-foreground"
                       : "text-foreground-muted hover:text-foreground hover:bg-primary/10"
-                  }`}
+                    }`}
                 >
                   <item.icon className="h-6 w-6" />
                   <span className="text-xl font-medium">{item.label}</span>

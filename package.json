@@ -2,8 +2,12 @@
   "homepage": "https://Patrick-Diniz.github.io/Portfolio",
   "name": "portfolio",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -11,7 +15,11 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "audit:security": "npm audit --production",
+    "audit:fix": "npm audit fix",
+    "type-check": "tsc --noEmit",
+    "update-deps": "npm outdated"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

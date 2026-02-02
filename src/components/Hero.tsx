@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
-import { motion, useMotionValue, useTransform, useSpring, type MotionValue } from "framer-motion";
+import { motion, useMotionValue, useTransform, useSpring, type MotionValue, type Variants } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import profilePhoto from "@/assets/profile_linkedin.webp";
 
@@ -14,7 +14,7 @@ const Hero = () => {
     }
   };
 
-  const scrollToProjects = () => scrollToSection("projetos");
+  const scrollToProjects = () => scrollToSection("projects");
 
   // Mouse tracking for interactive background
   const mouseX = useMotionValue(0);
@@ -210,7 +210,7 @@ const AnimatedMeshGradient = () => {
 const SplitTextHeading = ({ text }: { text: string }) => {
   const letters = text.split("");
 
-  const container = {
+  const container: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -221,7 +221,7 @@ const SplitTextHeading = ({ text }: { text: string }) => {
     },
   };
 
-  const child = {
+  const child: Variants = {
     hidden: {
       opacity: 0,
       y: 20,

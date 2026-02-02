@@ -1,181 +1,35 @@
-# Portfolio Pessoal — Patrick Diniz
+# Patrick Diniz
 
-Portfolio profissional desenvolvido com React, TypeScript e Vite, apresentando projetos, habilidades e experiência em análise de dados e automação.
+**Analista de Dados & Automação T.I**
 
-🌐 **Site ao vivo**: [patrickdiniz.com.br](https://patrickdiniz.com.br)
+Portfolio profissional desenvolvido para apresentar meus projetos e habilidades.
 
----
-
-## 🎯 Sobre o Projeto
-
-Portfolio de página única desenvolvido para apresentar minhas habilidades técnicas, projetos e experiência profissional de forma moderna e acessível. O design prioriza responsividade, animações suaves e uma experiência de usuário fluida.
+🌐 [patrickdiniz.com.br](https://patrickdiniz.com.br)
 
 ---
 
-## ✨ Funcionalidades
+## Sobre Mim
 
-### Seções Principais
+Sou apaixonado por transformar dados em insights e automatizar processos para aumentar eficiência. Com experiência em análise de dados, desenvolvimento web e automação de workflows, busco sempre criar soluções que fazem a diferença.
 
-- **Hero**: Apresentação com título profissional e call-to-action
-- **Sobre**: Biografia profissional e paixão por tecnologia
-- **Habilidades**: Competências organizadas por categoria (Análise de Dados, Desenvolvimento, Ferramentas)
-- **Projetos**: Galeria com trabalhos destacados incluindo dashboards e automações
-- **Contato**: Informações de contato e redes profissionais
-
-### Recursos Técnicos
-
-- Design responsivo (mobile-first)
-- Animações com Framer Motion
-- Tema dark/light mode
-- Navegação suave entre seções
-- Cards 3D com efeitos de hover
-- Otimizado para SEO
+Neste portfolio, você encontrará alguns dos meus principais projetos em análise de dados, dashboards interativos e automações de processos.
 
 ---
 
-## 🛠️ Stack Tecnológica
+## Projetos em Destaque
 
-### Core
-- **React 18** - Biblioteca de UI componentizada
-- **TypeScript** - Tipagem estática para maior robustez
-- **Vite** - Build tool rápida com HMR
-
-### UI/Styling
-- **Tailwind CSS** - Framework utility-first
-- **Framer Motion** - Animações fluidas
-- **Radix UI** - Componentes acessíveis
-- **Lucide Icons** - Ícones modernos
-
-### Qualidade & Deploy
-- **ESLint** - Linter para qualidade de código
-- **Vercel** - Hosting com deploy automático
-- **Git** - Controle de versão
+- **Dashboard de Análise Contratual** - Visualização de dados contratuais
+- **Automação de Fluxos de Trabalho** - Otimização de processos em TI
+- E mais projetos no site ao vivo!
 
 ---
 
-## 🚀 Instalação e Uso
+## Contato
 
-### Pré-requisitos
-```bash
-Node.js >= 18.0.0
-npm >= 9.0.0
-```
-
-### Instalação
-```bash
-# Clone o repositório
-git clone https://github.com/Patrick-Diniz/Portfolio.git
-cd Portfolio
-
-# Instale as dependências
-npm install
-
-# Inicie o servidor de desenvolvimento
-npm run dev
-```
-
-### Scripts Disponíveis
-```bash
-npm run dev              # Desenvolvimento (localhost:8080)
-npm run build            # Build de produção
-npm run preview          # Preview do build
-npm run lint             # Executar linter
-npm run audit:security   # Verificar vulnerabilidades
-npm run type-check       # Verificação TypeScript
-```
+- 📧 **Email**: [patricksdiniz@gmail.com](mailto:patricksdiniz@gmail.com)
+- 💼 **LinkedIn**: [diniz-patrick](https://www.linkedin.com/in/diniz-patrick/)
+- 🐙 **GitHub**: [Patrick-Diniz](https://github.com/Patrick-Diniz)
 
 ---
 
-## 🔒 Segurança
-
-Este projeto implementa headers de segurança HTTP profissionais:
-- Content-Security-Policy
-- X-Frame-Options
-- X-Content-Type-Options
-- Referrer-Policy
-- Permissions-Policy
-- Strict-Transport-Security
-
-**Score**: A no [SecurityHeaders.com](https://securityheaders.com)
-
-Consulte [README-SECURITY.md](./README-SECURITY.md) para detalhes completos.
-
----
-
-## 📁 Estrutura do Projeto
-
-```
-portfolio/
-├── public/              # Arquivos estáticos
-├── src/
-│   ├── assets/         # Imagens e recursos
-│   ├── components/     # Componentes React
-│   │   ├── ui/        # Componentes UI reutilizáveis
-│   │   ├── About.tsx
-│   │   ├── Contact.tsx
-│   │   ├── Hero.tsx
-│   │   ├── Navigation.tsx
-│   │   ├── Projects.tsx
-│   │   └── Skills.tsx
-│   ├── lib/           # Utilitários
-│   ├── App.tsx        # Componente principal
-│   └── main.tsx       # Entry point
-├── vercel.json        # Configuração de deploy
-└── package.json       # Dependências
-```
-
----
-
-## 🌐 Deploy
-
-### Vercel (Recomendado)
-
-Deploy automático configurado via Vercel:
-
-1. Push para a branch `main`
-2. Vercel faz build automaticamente
-3. Deploy em produção em ~1-2 minutos
-
-O projeto já está configurado com `vercel.json` incluindo headers de segurança.
-
----
-
-## 📈 Performance
-
-- ✅ Build otimizado com code splitting
-- ✅ Lazy loading de componentes
-- ✅ Imagens otimizadas (WebP)
-- ✅ CSS minificado
-- ✅ CDN global (Vercel Edge Network)
-
----
-
-## 🤝 Contribuindo
-
-Contribuições são bem-vindas! Consulte [CONTRIBUTING.md](./CONTRIBUTING.md) para:
-- Estrutura do projeto
-- Convenções de código
-- Processo de desenvolvimento
-- Guidelines de commit
-
----
-
-## 📝 Licença
-
-Este projeto é de código aberto e está disponível sob a licença MIT.
-
----
-
-## 📫 Contato
-
-**Patrick Diniz**  
-Analista de Dados & Automação T.I
-
-- 📧 Email: [patricksdiniz@gmail.com](mailto:patricksdiniz@gmail.com)
-- 💼 LinkedIn: [diniz-patrick](https://www.linkedin.com/in/diniz-patrick/)
-- 🐙 GitHub: [Patrick-Diniz](https://github.com/Patrick-Diniz)
-- 🌐 Portfolio: [patrickdiniz.com.br](https://patrickdiniz.com.br)
-
----
-
-**Desenvolvido com** ⚛️ React • 📘 TypeScript • ⚡ Vite
+Desenvolvido com React, TypeScript e Vite.

@@ -5,16 +5,6 @@ import { useRef, useEffect, useState } from "react";
 import profilePhoto from "@/assets/profile_linkedin.webp";
 
 const Hero = () => {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const navOffset = 40;
-      const elementPosition = element.offsetTop - navOffset;
-      window.scrollTo({ top: elementPosition, behavior: "smooth" });
-    }
-  };
-
-  const scrollToProjects = () => scrollToSection("projects");
 
   // Mouse tracking for interactive background
   const mouseX = useMotionValue(0);
@@ -93,7 +83,7 @@ const Hero = () => {
                 </motion.p>
               </div>
 
-              {/* Buttons - Full width on mobile */}
+              {/* Button - Full width on mobile */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -103,16 +93,8 @@ const Hero = () => {
                   damping: 20,
                   delay: 1.6
                 }}
-                className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center lg:justify-start"
+                className="flex justify-center lg:justify-start"
               >
-                <Button
-                  size="lg"
-                  className="w-full sm:w-auto bg-primary hover:bg-primary-dark text-primary-foreground font-semibold px-8 py-3 transition-all duration-300 hover:shadow-purple hover:-translate-y-1"
-                  onClick={scrollToProjects}
-                >
-                  Ver Projetos
-                </Button>
-
                 <Button
                   variant="outline"
                   size="lg"

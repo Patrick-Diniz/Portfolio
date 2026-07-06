@@ -26,9 +26,13 @@ export default defineConfig(({ mode }) => ({
     minify: mode === "production",
     rollupOptions: {
       output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom'],
-          'framer-motion': ['framer-motion'],
+        manualChunks(id) {
+          if (id.includes("node_modules/react") || id.includes("node_modules/react-dom")) {
+            return "react-vendor";
+          }
+          if (id.includes("node_modules/framer-motion")) {
+            return "framer-motion";
+          }
         },
       },
     },

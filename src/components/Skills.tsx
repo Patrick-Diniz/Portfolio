@@ -1,19 +1,5 @@
 import { motion, useMotionValue, useSpring, useTransform, useInView, type Variants } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
-import {
-  Database,
-  FileSpreadsheet,
-  PanelTop,
-  Code2,
-  Braces,
-  Palette,
-  Settings,
-  Cloud,
-  GitBranch,
-  Terminal,
-  Workflow,
-  Box
-} from "lucide-react";
 
 const Skills = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -125,18 +111,18 @@ const TechIconsGrid = () => {
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   const technologies = [
-    { name: "Python", icon: Code2, color: "#3776AB", emoji: "🐍" },
-    { name: "Power BI", icon: PanelTop, color: "#F2C811", emoji: "📊" },
-    { name: "SQL", icon: Database, color: "#00758F", emoji: "🗄️" },
-    { name: "Excel", icon: FileSpreadsheet, color: "#217346", emoji: "📈" },
-    { name: "Vue.js", icon: Braces, color: "#42B883", emoji: "💚" },
-    { name: "JavaScript", icon: Code2, color: "#F7DF1E", emoji: "⚡" },
-    { name: "Tailwind", icon: Palette, color: "#06B6D4", emoji: "🎨" },
-    { name: "GLPI", icon: Settings, color: "#9C5CA4", emoji: "🎫" },
-    { name: "Automate", icon: Workflow, color: "#0066FF", emoji: "⚙️" },
-    { name: "Git", icon: GitBranch, color: "#F05032", emoji: "🔀" },
-    { name: "Linux", icon: Terminal, color: "#FCC624", emoji: "🐧" },
-    { name: "M365", icon: Cloud, color: "#0078D4", emoji: "☁️" },
+    { name: "Python", color: "#3776AB", emoji: "🐍" },
+    { name: "Power BI", color: "#F2C811", emoji: "📊" },
+    { name: "SQL", color: "#00758F", emoji: "🗄️" },
+    { name: "Excel", color: "#217346", emoji: "📈" },
+    { name: "Vue.js", color: "#42B883", emoji: "💚" },
+    { name: "JavaScript", color: "#F7DF1E", emoji: "⚡" },
+    { name: "Tailwind", color: "#06B6D4", emoji: "🎨" },
+    { name: "GLPI", color: "#9C5CA4", emoji: "🎫" },
+    { name: "Automate", color: "#0066FF", emoji: "⚙️" },
+    { name: "Git", color: "#F05032", emoji: "🔀" },
+    { name: "Linux", color: "#FCC624", emoji: "🐧" },
+    { name: "M365", color: "#0078D4", emoji: "☁️" },
   ];
 
   const container: Variants = {
@@ -158,7 +144,7 @@ const TechIconsGrid = () => {
       animate={isInView ? "visible" : "hidden"}
       className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 mb-16"
     >
-      {technologies.map((tech, index) => (
+      {technologies.map((tech) => (
         <TechIconCard key={tech.name} {...tech} />
       ))}
     </motion.div>
@@ -168,12 +154,11 @@ const TechIconsGrid = () => {
 // Individual Tech Icon Card with 3D Tilt
 interface TechIconCardProps {
   name: string;
-  icon: any;
   color: string;
   emoji: string;
 }
 
-const TechIconCard = ({ name, icon: Icon, color, emoji }: TechIconCardProps) => {
+const TechIconCard = ({ name, color, emoji }: TechIconCardProps) => {
   const cardRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
 

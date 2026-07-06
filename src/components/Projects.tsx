@@ -5,6 +5,13 @@ import dashboardImage from "@/assets/project-dashboard.webp";
 import automationImage from "@/assets/project-automation.webp";
 import portalImage from "@/assets/project-portal.webp";
 
+interface Project {
+  title: string;
+  description: string;
+  technologies: string[];
+  image: string;
+  gradient: string;
+}
 
 const Projects = () => {
   const projects = [
@@ -83,7 +90,7 @@ const Projects = () => {
   };
 
   // Project Card Component - Nasser Ali Style: Clean, Centered, Always Visible
-  const ProjectCard = ({ project, index }: { project: any; index: number }) => {
+  const ProjectCard = ({ project, index }: { project: Project; index: number }) => {
     const cardRef = useRef<HTMLDivElement>(null);
     const [isHovered, setIsHovered] = useState(false);
 

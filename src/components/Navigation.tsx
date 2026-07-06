@@ -2,17 +2,17 @@ import { useState, useEffect } from "react";
 import { Menu, X, Home, User, Code, Briefcase, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+const navItems = [
+  { id: "hero", label: "Início", icon: Home },
+  { id: "sobre", label: "Sobre", icon: User },
+  { id: "habilidades", label: "Habilidades", icon: Code },
+  { id: "projects", label: "Projetos", icon: Briefcase },
+  { id: "contato", label: "Contato", icon: Mail },
+];
+
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
-
-  const navItems = [
-    { id: "hero", label: "Início", icon: Home },
-    { id: "sobre", label: "Sobre", icon: User },
-    { id: "habilidades", label: "Habilidades", icon: Code },
-    { id: "projects", label: "Projetos", icon: Briefcase },
-    { id: "contato", label: "Contato", icon: Mail },
-  ];
 
   useEffect(() => {
     const handleScroll = () => {

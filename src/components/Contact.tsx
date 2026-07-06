@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Github, MapPin, Phone } from "lucide-react";
+import { Mail, Linkedin, Github, MapPin, Phone, type LucideIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, useMotionValue, useSpring, useTransform, useInView, type Variants } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
@@ -140,8 +140,17 @@ const TitleWithSquare = () => {
   );
 };
 
+interface ContactInfo {
+  icon: LucideIcon;
+  label: string;
+  value: string;
+  href: string;
+  color: string;
+  glowColor: string;
+}
+
 // Contact Info Column with 3D Tilt
-const ContactInfoColumn = ({ contactInfo }: { contactInfo: any[] }) => {
+const ContactInfoColumn = ({ contactInfo }: { contactInfo: ContactInfo[] }) => {
   const cardRef = useRef<HTMLDivElement>(null);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
@@ -223,14 +232,7 @@ const ContactInfoColumn = ({ contactInfo }: { contactInfo: any[] }) => {
 
 // Individual Contact Item with Glow Effect
 interface ContactItemProps {
-  contact: {
-    icon: any;
-    label: string;
-    value: string;
-    href: string;
-    color: string;
-    glowColor: string;
-  };
+  contact: ContactInfo;
 }
 
 const ContactItem = ({ contact }: ContactItemProps) => {

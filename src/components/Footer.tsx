@@ -1,4 +1,4 @@
-import { Heart, Code } from "lucide-react";
+import { Code } from "lucide-react";
 
 const Footer = () => {
   return (

@@ -1358,10 +1358,13 @@ git commit -m "feat(hero): replace hero with the 2026 two-line display type"
 
 Create `src/components/Works.test.tsx`:
 
+`@testing-library/user-event` **não** está instalado neste projeto, e a
+constraint global proíbe adicionar dependência. Use `fireEvent`, que vem de
+`@testing-library/react`.
+
 ```tsx
 import { describe, expect, it } from "vitest";
-import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
+import { fireEvent, render, screen } from "@testing-library/react";
 import Works from "./Works";
 import { cases } from "@/lib/portfolio-data";
 
@@ -1378,18 +1381,16 @@ describe("Works", () => {
     }
   });
 
-  it("abre um caso no clique — o caminho que o toque usa", async () => {
-    const user = userEvent.setup();
+  it("abre um caso no clique — o caminho que o toque usa", () => {
     render(<Works />);
 
-    await user.click(linhas()[2]);
+    fireEvent.click(linhas()[2]);
 
     expect(linhas()[2]).toHaveAttribute("aria-expanded", "true");
     expect(linhas()[0]).toHaveAttribute("aria-expanded", "false");
   });
 
-  it("abre um caso com Enter — focar sozinho não abre", async () => {
-    const user = userEvent.setup();
+  it("abre um caso com Enter — focar sozinho não abre", () => {
     render(<Works />);
 
     linhas()[1].focus();
@@ -1398,17 +1399,15 @@ describe("Works", () => {
     // handler de teclado existe.
     expect(linhas()[1]).toHaveAttribute("aria-expanded", "false");
 
-    await user.keyboard("{Enter}");
+    fireEvent.keyDown(linhas()[1], { key: "Enter" });
 
     expect(linhas()[1]).toHaveAttribute("aria-expanded", "true");
   });
 
-  it("abre um caso com Espaço", async () => {
-    const user = userEvent.setup();
+  it("abre um caso com Espaço", () => {
     render(<Works />);
 
-    linhas()[1].focus();
-    await user.keyboard(" ");
+    fireEvent.keyDown(linhas()[1], { key: " " });
 
     expect(linhas()[1]).toHaveAttribute("aria-expanded", "true");
   });
@@ -1422,11 +1421,10 @@ describe("Works", () => {
     expect(paineis[1].style.visibility).toBe("hidden");
   });
 
-  it("mostra o preview do caso ativo com rótulo acessível", async () => {
-    const user = userEvent.setup();
+  it("mostra o preview do caso ativo com rótulo acessível", () => {
     render(<Works />);
 
-    await user.click(linhas()[1]);
+    fireEvent.click(linhas()[1]);
 
     expect(
       screen.getByRole("img", { name: `Preview do projeto ${cases[1].title}` })
@@ -1611,12 +1609,6 @@ npx vitest run src/components/Works.test.tsx
 ```
 
 Esperado: PASS, 6 testes.
-
-Se `userEvent` não estiver instalado, o import falha. Confirme antes:
-`node -e "require.resolve('@testing-library/user-event')"`. Se faltar, troque
-`user.click(x)` por `fireEvent.click(x)` e `user.keyboard("{Enter}")` por
-`fireEvent.keyDown(x, { key: "Enter" })`, importando `fireEvent` de
-`@testing-library/react` — **não** instale dependência nova.
 
 - [ ] **Step 5: Commit**
 

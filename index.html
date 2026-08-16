@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8" />
@@ -8,22 +8,35 @@
   <meta name="description"
     content="Portfólio de Patrick Diniz - Especialista em Análise de Dados, Automação e Desenvolvimento Web. Transformando dados em insights com soluções inovadoras." />
 
-  <!-- Security Meta Tags -->
-  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <!--
+    X-Content-Type-Options e X-Frame-Options só valem como cabeçalho HTTP; em
+    <meta> o navegador ignora e ainda registra erro no console. Os cabeçalhos
+    reais estão em vercel.json.
+  -->
   <meta name="referrer" content="strict-origin-when-cross-origin" />
 
+  <!-- O apex responde 307 para www; a URL canônica é a com www. -->
+  <link rel="canonical" href="https://www.patrickdiniz.com.br/" />
+
   <!-- Open Graph Meta Tags -->
+  <meta property="og:site_name" content="Patrick Diniz" />
+  <meta property="og:locale" content="pt_BR" />
   <meta property="og:title" content="Patrick Diniz - Analista de Dados & Automação T.I" />
   <meta property="og:description"
     content="Portfólio de Patrick Diniz - Especialista em Análise de Dados, Automação e Desenvolvimento Web. Transformando dados em insights com soluções inovadoras." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://patrickdiniz.com.br/" />
-  <meta property="og:image" content="https://patrickdiniz.com.br/og-image.png" />
+  <meta property="og:url" content="https://www.patrickdiniz.com.br/" />
+  <meta property="og:image" content="https://www.patrickdiniz.com.br/og-image.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Patrick Diniz - Analista de Dados & Automação T.I" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Patrick Diniz - Analista de Dados & Automação T.I" />
   <meta name="twitter:description" content="Portfólio profissional com projetos de análise de dados e automação" />
+  <meta name="twitter:image" content="https://www.patrickdiniz.com.br/og-image.png" />
+  <meta name="twitter:image:alt" content="Patrick Diniz - Analista de Dados & Automação T.I" />
 
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 

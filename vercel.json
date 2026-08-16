@@ -32,7 +32,7 @@
     ],
     "rewrites": [
         {
-            "source": "/(.*)",
+            "source": "/((?!.*\\.(?:png|jpg|jpeg|gif|webp|avif|svg|ico|txt|xml|json|webmanifest|woff|woff2|ttf|otf|eot|css|js|mjs|map|pdf|mp4|webm)$).*)",
             "destination": "/"
         }
     ]

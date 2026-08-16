@@ -221,19 +221,31 @@ const SplitTextHeading = ({ text }: { text: string }) => {
     },
   };
 
+  // O degrad\u00EA n\u00E3o pode vir de `hero-text` aqui: `background-clip: text` no h1 n\u00E3o
+  // recorta glifos de filhos `inline-block`, e o `inline-block` \u00E9 o que permite
+  // animar cada letra. As letras herdariam s\u00F3 o `text-transparent` e o nome
+  // sumiria. Em vez disso, cada letra recebe uma cor s\u00F3lida interpolada ao longo
+  // do mesmo degrad\u00EA \u2014 visualmente equivalente, sem depender de medir o DOM.
+  const lastIndex = letters.length - 1;
+
   return (
     <motion.h1
       variants={container}
       initial="hidden"
       animate="visible"
-      className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold hero-text leading-tight"
+      className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight"
     >
       {letters.map((letter, index) => (
         <motion.span
           key={`${letter}-${index}`}
           variants={child}
           className="inline-block"
-          style={{ display: letter === " " ? "inline" : "inline-block" }}
+          style={{
+            display: letter === " " ? "inline" : "inline-block",
+            color: `color-mix(in oklab, hsl(var(--foreground)) ${
+              lastIndex > 0 ? 100 - (index / lastIndex) * 100 : 100
+            }%, hsl(var(--primary)))`,
+          }}
         >
           {letter === " " ? "\u00A0" : letter}
         </motion.span>

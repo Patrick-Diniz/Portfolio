@@ -163,22 +163,27 @@ Três defesas:
 ### 4.2 Delay órfão quando o preloader não roda
 
 A cadeia de entrada do hero usa `animation-delay` de 2.45s a 3.2s, calibrada
-para o preloader. Se o preloader é pulado (uma vez por sessão) ou o usuário tem
-movimento reduzido, a página fica ~2,5s em branco: a regra
-`prefers-reduced-motion` do handoff zera a *duração* das animações, nunca o
-*delay*.
+para o preloader. Se o preloader é pulado, a página fica ~2,5s em branco: a
+regra `prefers-reduced-motion` do handoff zera a *duração* das animações, nunca
+o *delay*.
 
-Solução: os delays passam a ser `calc(var(--seq) * Xs)`. `--seq: 1` na primeira
-visita da sessão; `--seq: 0` quando o preloader é pulado ou o movimento é
-reduzido. Uma variável governa a sequência inteira.
+Solução: os delays passam a ser `calc(var(--seq) * Xs)`. `--seq: 1` quando o
+preloader roda; `--seq: 0` quando é pulado. Uma variável governa a sequência
+inteira.
 
 Mecanismo explícito: `--seq: 1` é o valor padrão declarado no `:root` do
 `index.css`. O `Preloader` decide no primeiro efeito de montagem — antes de
 pintar, via `useLayoutEffect`, para não haver um quadro com o valor errado — e
 grava `document.documentElement.style.setProperty("--seq", "0")` quando
-`sessionStorage` já registra a visita ou quando
-`matchMedia("(prefers-reduced-motion: reduce)")` casa. A chave de sessão é
-`pd-preloader-seen`.
+`matchMedia("(prefers-reduced-motion: reduce)")` casa.
+
+**Revisto em 16/08/2026.** O preloader rodava uma vez por sessão, guardando a
+visita em `sessionStorage` sob a chave `pd-preloader-seen`. O dono do site
+decidiu que ele deve rodar a cada carregamento, inclusive num F5: é a primeira
+impressão do portfólio e vale repetir. O gate de sessão saiu junto com a chave;
+`prefers-reduced-motion` continua sendo a única condição que pula, porque não é
+preferência estética — quem pediu menos movimento não deve encarar 2,3s de
+animação bloqueando a tela.
 
 ### 4.3 `Works` só responde a mouse
 

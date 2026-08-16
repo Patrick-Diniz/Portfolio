@@ -89,11 +89,16 @@ do objeto, então `animationDelay` **depois**. Invertido, o delay some sem aviso
 
 **2. `--seq` governa a sequência de entrada.**
 
-Vale `1` por padrão. O `Preloader` grava `0` quando não roda — segunda visita na
-mesma sessão, ou `prefers-reduced-motion`. Sem isso, a página ficaria ~2,5s em
-branco esperando delays calibrados para uma animação que não tocou. A regra
+Vale `1` por padrão. O `Preloader` grava `0` quando não roda — o que só acontece
+sob `prefers-reduced-motion`. Sem isso, a página ficaria ~2,5s em branco
+esperando delays calibrados para uma animação que não tocou. A regra
 `prefers-reduced-motion` zera duração **e** delay; zerar só a duração não
 resolve.
+
+O preloader roda a **cada** carregamento, inclusive num F5 — não há gate de
+sessão. Se você for reintroduzir um, lembre que os delays do hero dependem de
+`--seq` ir a `0` no mesmo caminho, senão a tela fica em branco pelo tempo da
+sequência que não tocou.
 
 ### Reveal on scroll
 

@@ -1,44 +1,27 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
-const SEEN_KEY = "pd-preloader-seen";
-
-/** sessionStorage lança em modo privado de alguns navegadores. */
-function readSeen(): boolean {
-  try {
-    return sessionStorage.getItem(SEEN_KEY) === "1";
-  } catch {
-    return false;
-  }
-}
-
-function markSeen() {
-  try {
-    sessionStorage.setItem(SEEN_KEY, "1");
-  } catch {
-    /* sem sessão persistente: o preloader roda de novo, o que é aceitável */
-  }
-}
-
 /**
  * "TÉDIO" entra, é riscado por uma barra violeta e sai; "AUTOMATIZADO." sobe
  * no lugar. Sequência de 2,3s, depois o painel inteiro sobe.
  *
- * Roda uma vez por sessão. Quando pula — segunda visita ou movimento reduzido —
- * grava `--seq: 0`, o que colapsa os delays de entrada do resto da página.
- * Sem isso a página ficaria ~2,5s em branco esperando delays calibrados para
- * um preloader que não rodou.
+ * Roda a cada carregamento da página, inclusive num F5 — é a primeira
+ * impressão do portfólio e vale repetir. Não guarda estado em sessão.
+ *
+ * A única condição que o pula é `prefers-reduced-motion`, que não é
+ * preferência estética: quem pediu menos movimento não deve encarar 2,3s de
+ * animação bloqueando a tela. Nesse caso grava `--seq: 0`, colapsando os
+ * delays de entrada do resto da página — sem isso, a página ficaria ~2,5s em
+ * branco esperando delays calibrados para um preloader que não rodou.
  */
 const Preloader = () => {
-  // A decisão sai no primeiro render, não num efeito: `sessionStorage` e
-  // `matchMedia` respondem de forma síncrona e não mudam durante a vida do
-  // componente. Resolver aqui evita um render extra e satisfaz a regra
-  // `react-hooks/set-state-in-effect` sem precisar suprimi-la — a regra está
-  // certa, o `setState` dentro do efeito é que era desnecessário.
-  const [skip] = useState(() => {
-    const prefersReduced =
-      window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false;
-    return prefersReduced || readSeen();
-  });
+  // A decisão sai no primeiro render, não num efeito: `matchMedia` responde de
+  // forma síncrona e não muda durante a vida do componente. Resolver aqui evita
+  // um render extra e satisfaz a regra `react-hooks/set-state-in-effect` sem
+  // precisar suprimi-la — a regra está certa, o `setState` dentro do efeito é
+  // que era desnecessário.
+  const [skip] = useState(
+    () => window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false
+  );
   const [progress, setProgress] = useState(0);
   const [done, setDone] = useState(false);
   const progressRef = useRef(0);
@@ -48,8 +31,6 @@ const Preloader = () => {
   useLayoutEffect(() => {
     if (skip) {
       document.documentElement.style.setProperty("--seq", "0");
-    } else {
-      markSeen();
     }
   }, [skip]);
 

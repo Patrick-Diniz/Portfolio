@@ -28,25 +28,32 @@ afterEach(() => {
 });
 
 describe("Preloader", () => {
-  it("roda na primeira visita da sessão e mantém a sequência ligada", () => {
+  it("roda ao montar e mantém a sequência ligada", () => {
     const { container } = render(<Preloader />);
 
     expect(container.textContent).toContain("TÉDIO");
     expect(document.documentElement.style.getPropertyValue("--seq")).toBe("");
-    expect(sessionStorage.getItem("pd-preloader-seen")).toBe("1");
   });
 
-  it("pula na segunda montagem da mesma sessão e zera a sequência", () => {
+  it("roda de novo a cada carregamento, inclusive na mesma sessão", () => {
     const primeira = render(<Preloader />);
+    expect(primeira.container.textContent).toContain("TÉDIO");
     primeira.unmount();
 
     const { container } = render(<Preloader />);
 
-    expect(container.textContent).toBe("");
-    expect(document.documentElement.style.getPropertyValue("--seq")).toBe("0");
+    expect(container.textContent).toContain("TÉDIO");
+    expect(document.documentElement.style.getPropertyValue("--seq")).toBe("");
   });
 
-  it("pula sob movimento reduzido, mesmo na primeira visita", () => {
+  it("não guarda nada em sessionStorage", () => {
+    render(<Preloader />).unmount();
+    render(<Preloader />);
+
+    expect(sessionStorage.length).toBe(0);
+  });
+
+  it("pula sob movimento reduzido e zera a sequência", () => {
     setReducedMotion(true);
 
     const { container } = render(<Preloader />);

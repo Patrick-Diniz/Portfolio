@@ -15,7 +15,7 @@ const Navigation = () => (
       background:
         "linear-gradient(180deg,rgba(18,16,13,.92),rgba(18,16,13,.75) 70%,transparent)",
       animation: "fadeUp .8s cubic-bezier(.22,1,.36,1) both",
-      animationDelay: "calc(var(--seq) * 2.7s)",
+      animationDelay: "calc(var(--seq) * 1.48s)",
     }}
   >
     <a

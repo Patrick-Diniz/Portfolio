@@ -67,6 +67,18 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        ink: "#f2efe8",
+        void: {
+          DEFAULT: "#12100d",
+          deep: "#0d0b09",
+        },
+        violet: "#9a6bff",
+      },
+      fontFamily: {
+        display: ["Archivo", "system-ui", "sans-serif"],
+        sans: ["Archivo", "system-ui", "sans-serif"],
+        serif: ["'Instrument Serif'", "Georgia", "serif"],
+        mono: ["'JetBrains Mono'", "ui-monospace", "monospace"],
       },
       borderRadius: {
         lg: "var(--radius)",

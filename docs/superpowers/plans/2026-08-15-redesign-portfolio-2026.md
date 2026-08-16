@@ -594,15 +594,28 @@ function setReducedMotion(reduce: boolean) {
 
 const matchMediaOriginal = window.matchMedia;
 
+/** Observer que nunca dispara — o cenário que a rede de segurança cobre. */
+class ObserverInerte {
+  observe = vi.fn();
+  unobserve = vi.fn();
+  disconnect = vi.fn();
+}
+
 beforeEach(() => {
   vi.useFakeTimers();
   setReducedMotion(false);
+  // Este arquivo é dono da própria fixture de IntersectionObserver.
+  // `vi.unstubAllGlobals()` no afterEach derrubaria também o stub que
+  // src/test/setup.ts instala uma vez por arquivo, deixando os testes
+  // seguintes sem observer nenhum — e eles passariam pelo motivo errado,
+  // caindo na defesa "sem IntersectionObserver" em vez de exercitar o
+  // caminho que pretendem testar.
+  vi.stubGlobal("IntersectionObserver", ObserverInerte);
 });
 
 afterEach(() => {
   vi.useRealTimers();
   window.matchMedia = matchMediaOriginal;
-  vi.unstubAllGlobals();
 });
 
 describe("useReveal", () => {
@@ -632,7 +645,11 @@ describe("useReveal", () => {
 });
 ```
 
-Nota: `src/test/setup.ts` já injeta um `IntersectionObserver` de mentira que nunca dispara — é exatamente o cenário que a rede de segurança precisa cobrir.
+Nota: `src/test/setup.ts` também injeta um `IntersectionObserver` de mentira que
+nunca dispara. Este arquivo instala o seu próprio no `beforeEach` em vez de
+depender daquele — e por isso **não** chama `vi.unstubAllGlobals()`, que
+restauraria todos os stubs rastreados, inclusive o do `setup.ts`, e deixaria os
+testes seguintes do arquivo sem observer. Não alterar `src/test/setup.ts`.
 
 - [ ] **Step 2: Rodar e confirmar que falha**
 

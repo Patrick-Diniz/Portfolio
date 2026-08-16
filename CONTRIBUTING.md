@@ -100,6 +100,18 @@ sessão. Se você for reintroduzir um, lembre que os delays do hero dependem de
 `--seq` ir a `0` no mesmo caminho, senão a tela fica em branco pelo tempo da
 sequência que não tocou.
 
+### A coreografia de entrada
+
+A sequência dura `SEQUENCE_S` (1,2s), declarada em `Preloader.tsx`. Os
+`animation-delay` do `Hero` e da `Navigation` vão de 1,35s a 1,74s — calibrados
+para caírem 0,15s depois dela.
+
+Os números vivem em arquivos diferentes, então **encurtar um lado sem o outro
+deixa a tela vazia no intervalo**. `src/components/sequence.test.tsx` trava a
+relação, não os valores: você pode mudar a duração à vontade, desde que os
+delays acompanhem. Ele falha se o primeiro delay ficar antes do fim da
+sequência, ou mais de 0,4s depois dela.
+
 ### Reveal on scroll
 
 `[data-reveal]` num elemento faz `useReveal` escondê-lo e revelá-lo ao entrar na

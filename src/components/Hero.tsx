@@ -3,8 +3,12 @@ import { CV_URL } from "@/lib/portfolio-data";
 
 /**
  * Hero — duas linhas display sob máscara de overflow, frase serifada, dois CTAs
- * e a figura fig. 01. Todos os delays multiplicam `--seq`: quando o preloader
- * não roda, a entrada é imediata em vez de esperar 2,5s por nada.
+ * e a figura fig. 01.
+ *
+ * Todos os delays multiplicam `--seq`: quando o preloader não roda, a entrada é
+ * imediata em vez de esperar por uma sequência que não tocou. E todos são
+ * calibrados para a duração do preloader — encurtar um lado sem o outro deixa a
+ * tela vazia no intervalo. `sequence.test.tsx` trava essa relação.
  */
 const Hero = () => (
   <section
@@ -16,7 +20,7 @@ const Hero = () => (
         className="mb-8 font-mono text-[12.5px] text-[rgba(242,239,232,.5)]"
         style={{
           animation: "fadeUp .7s cubic-bezier(.22,1,.36,1) both",
-          animationDelay: "calc(var(--seq) * 2.45s)",
+          animationDelay: "calc(var(--seq) * 1.35s)",
         }}
       >
         RIO DE JANEIRO, BR — ANALISTA DE DADOS &amp; AUTOMAÇÃO T.I
@@ -28,7 +32,7 @@ const Hero = () => (
             className="block text-[min(8.6vw,120px,14vh)]"
             style={{
               animation: "heroLine .85s cubic-bezier(.22,1,.36,1) both",
-              animationDelay: "calc(var(--seq) * 2.5s)",
+              animationDelay: "calc(var(--seq) * 1.38s)",
             }}
           >
             Automatizando
@@ -39,7 +43,7 @@ const Hero = () => (
             className="mt-6 block text-[min(9.8vw,136px,15.5vh)]"
             style={{
               animation: "heroLine .85s cubic-bezier(.22,1,.36,1) both",
-              animationDelay: "calc(var(--seq) * 2.62s)",
+              animationDelay: "calc(var(--seq) * 1.44s)",
             }}
           >
             o tédio<span className="text-violet">.</span>
@@ -53,7 +57,7 @@ const Hero = () => (
             className="m-0 max-w-[24ch] font-serif text-[clamp(20px,2.1vw,29px)] italic leading-[1.25] text-[rgba(242,239,232,.85)]"
             style={{
               animation: "fadeUp .8s cubic-bezier(.22,1,.36,1) both",
-              animationDelay: "calc(var(--seq) * 2.85s)",
+              animationDelay: "calc(var(--seq) * 1.56s)",
             }}
           >
             …e transformando dados <br />
@@ -64,7 +68,7 @@ const Hero = () => (
             className="mt-[26px] flex flex-wrap gap-4"
             style={{
               animation: "fadeUp .8s cubic-bezier(.22,1,.36,1) both",
-              animationDelay: "calc(var(--seq) * 3s)",
+              animationDelay: "calc(var(--seq) * 1.64s)",
             }}
           >
             <a
@@ -89,7 +93,7 @@ const Hero = () => (
           className="relative mx-auto h-[274px] w-[250px] flex-none md:mx-0"
           style={{
             animation: "fadeUp .9s cubic-bezier(.22,1,.36,1) both",
-            animationDelay: "calc(var(--seq) * 2.9s)",
+            animationDelay: "calc(var(--seq) * 1.59s)",
           }}
         >
           <div className="absolute inset-x-0 bottom-0 top-[18px] rotate-[3deg] rounded-[2px] bg-violet" />
@@ -132,7 +136,7 @@ const Hero = () => (
       className="absolute bottom-[26px] left-[22px] flex items-center gap-[10px] font-mono text-[11px] text-[rgba(242,239,232,.45)] md:left-11"
       style={{
         animation: "fadeUp .8s cubic-bezier(.22,1,.36,1) both",
-        animationDelay: "calc(var(--seq) * 3.2s)",
+        animationDelay: "calc(var(--seq) * 1.74s)",
       }}
     >
       <span style={{ animation: "scrollNudge 1.8s ease-in-out infinite" }}>↓</span>{" "}

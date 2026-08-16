@@ -862,28 +862,32 @@ function markSeen() {
  * um preloader que não rodou.
  */
 const Preloader = () => {
-  const [skip, setSkip] = useState<boolean | null>(null);
+  // A decisão sai no primeiro render, não num efeito: `sessionStorage` e
+  // `matchMedia` respondem de forma síncrona e não mudam durante a vida do
+  // componente. Resolver aqui evita um render extra e satisfaz a regra
+  // `react-hooks/set-state-in-effect` sem precisar suprimi-la — a regra está
+  // certa, o `setState` dentro do efeito é que era desnecessário.
+  const [skip] = useState(() => {
+    const prefersReduced =
+      window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false;
+    return prefersReduced || readSeen();
+  });
   const [progress, setProgress] = useState(0);
   const [done, setDone] = useState(false);
   const progressRef = useRef(0);
 
-  // useLayoutEffect: decide antes do primeiro quadro, para não existir um
-  // instante com a sequência errada.
+  // useLayoutEffect: grava antes do primeiro quadro, para não existir um
+  // instante com a sequência errada. Só escreve — não chama setState.
   useLayoutEffect(() => {
-    const prefersReduced =
-      window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false;
-    const shouldSkip = prefersReduced || readSeen();
-
-    if (shouldSkip) {
+    if (skip) {
       document.documentElement.style.setProperty("--seq", "0");
     } else {
       markSeen();
     }
-    setSkip(shouldSkip);
-  }, []);
+  }, [skip]);
 
   useEffect(() => {
-    if (skip !== false) return;
+    if (skip) return;
 
     const id = setInterval(() => {
       const next = Math.min(
@@ -901,7 +905,7 @@ const Preloader = () => {
     return () => clearInterval(id);
   }, [skip]);
 
-  if (skip !== false) return null;
+  if (skip) return null;
 
   const pct = Math.round(progress);
 

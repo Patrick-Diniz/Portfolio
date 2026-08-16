@@ -203,6 +203,16 @@ animação. `aria-hidden` acompanha o mesmo estado.
   (~131KB, 43KB gzip).
 - Componentes shadcn órfãos, `hooks/use-toast.ts`, `hooks/use-mobile.tsx` e os
   `Toaster`/`Sonner`/`TooltipProvider` de `App.tsx` são removidos.
+- A remoção do shadcn deixa `src/components/ui/` inteiro sem consumidor: oito
+  dos doze já não são importados hoje, e os outros quatro só por `App.tsx`,
+  `use-toast.ts` e `toaster.tsx`. Com eles saem `src/lib/utils.ts` (existe só
+  para o helper `cn`) e as dependências que os serviam: os sete `@radix-ui/*`,
+  `class-variance-authority`, `next-themes`, `sonner`, `lucide-react` (o design
+  novo desenha as setas com texto), `clsx`, `tailwind-merge` e
+  `tailwindcss-animate`. Sobram `react`, `react-dom` e `react-router-dom`.
+- `tailwind.config.ts` perde os blocos `keyframes`, `animation`,
+  `backgroundImage` e `boxShadow`: são do design antigo e os dois últimos
+  apontam para tokens `--gradient-*` e `--shadow-purple` que deixam de existir.
 - `index.html`: title, description, `og:title` e `og:description` passam para a
   copy do redesign. `og-image.png` é regenerado na paleta nova.
 - `overflow-x: clip` no body permanece (checklist de aceite do handoff).

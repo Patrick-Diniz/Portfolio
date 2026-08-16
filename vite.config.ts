@@ -1,5 +1,4 @@
-/// <reference types="vitest/config" />
-import { defineConfig } from "vite";
+import { configDefaults, defineConfig } from "vitest/config";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
@@ -26,6 +25,9 @@ export default defineConfig(({ mode }) => ({
     environment: "jsdom",
     globals: true,
     setupFiles: "./src/test/setup.ts",
+    // Worktrees locais em .claude/ têm seu próprio node_modules; incluí-los
+    // carregaria uma segunda cópia do React e quebraria os hooks.
+    exclude: [...configDefaults.exclude, ".claude/**"],
   },
   build: {
     sourcemap: mode === "development",

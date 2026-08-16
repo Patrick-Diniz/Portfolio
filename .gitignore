@@ -40,3 +40,7 @@ build
 # OS files
 Thumbs.db
 .DS_Store
+
+# Local working files (not part of the deployed site)
+.claude/
+design_handoff_portfolio_2026/

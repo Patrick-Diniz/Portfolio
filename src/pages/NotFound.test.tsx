@@ -12,6 +12,7 @@ describe("NotFound", () => {
     );
 
     expect(screen.getByText("404")).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /return to home/i })).toHaveAttribute("href", "/");
+    expect(screen.getByText("/rota-inexistente")).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /voltar ao início/i })).toHaveAttribute("href", "/");
   });
 });

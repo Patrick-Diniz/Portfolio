@@ -1,392 +1,144 @@
-import { Button } from "@/components/ui/button";
-import { ExternalLink } from "lucide-react";
-import { motion, useMotionValue, useTransform, useSpring, type MotionValue, type Variants } from "framer-motion";
-import { useRef, useEffect, useState } from "react";
-import profilePhoto from "@/assets/profile_linkedin.webp";
+import sticker from "@/assets/patrick-sticker.png";
+import { CV_URL } from "@/lib/portfolio-data";
 
-const Hero = () => {
+/**
+ * Hero — duas linhas display sob máscara de overflow, frase serifada, dois CTAs
+ * e a figura fig. 01. Todos os delays multiplicam `--seq`: quando o preloader
+ * não roda, a entrada é imediata em vez de esperar 2,5s por nada.
+ */
+const Hero = () => (
+  <section
+    id="topo"
+    className="relative box-border flex min-h-screen scroll-mt-10 flex-col justify-center overflow-hidden px-[22px] pt-24 md:px-11"
+  >
+    <div className="relative z-[1] flex flex-1 flex-col justify-center">
+      <div
+        className="mb-8 font-mono text-[12.5px] text-[rgba(242,239,232,.5)]"
+        style={{
+          animation: "fadeUp .7s cubic-bezier(.22,1,.36,1) both",
+          animationDelay: "calc(var(--seq) * 2.45s)",
+        }}
+      >
+        RIO DE JANEIRO, BR — ANALISTA DE DADOS &amp; AUTOMAÇÃO T.I
+      </div>
 
-  // Mouse tracking for interactive background
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
+      <h1 className="m-0 font-display font-black uppercase leading-[.9] tracking-[-.045em] text-ink">
+        <span className="block overflow-hidden">
+          <span
+            className="block text-[min(8.6vw,120px,14vh)]"
+            style={{
+              animation: "heroLine .85s cubic-bezier(.22,1,.36,1) both",
+              animationDelay: "calc(var(--seq) * 2.5s)",
+            }}
+          >
+            Automatizando
+          </span>
+        </span>
+        <span className="block overflow-hidden">
+          <span
+            className="mt-6 block text-[min(9.8vw,136px,15.5vh)]"
+            style={{
+              animation: "heroLine .85s cubic-bezier(.22,1,.36,1) both",
+              animationDelay: "calc(var(--seq) * 2.62s)",
+            }}
+          >
+            o tédio<span className="text-violet">.</span>
+          </span>
+        </span>
+      </h1>
 
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      const { clientX, clientY } = e;
-      const { innerWidth, innerHeight } = window;
+      <div className="mt-2 grid grid-cols-1 items-end gap-12 pb-7 md:grid-cols-[1fr_auto]">
+        <div>
+          <p
+            className="m-0 max-w-[24ch] font-serif text-[clamp(20px,2.1vw,29px)] italic leading-[1.25] text-[rgba(242,239,232,.85)]"
+            style={{
+              animation: "fadeUp .8s cubic-bezier(.22,1,.36,1) both",
+              animationDelay: "calc(var(--seq) * 2.85s)",
+            }}
+          >
+            …e transformando dados <br />
+            em decisões que a sua equipe consegue defender.
+          </p>
 
-      // Normalize to -1 to 1 range
-      mouseX.set((clientX / innerWidth) * 2 - 1);
-      mouseY.set((clientY / innerHeight) * 2 - 1);
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, [mouseX, mouseY]);
-
-  return (
-    <section className="min-h-screen relative overflow-hidden bg-gradient-to-br from-background via-background-secondary to-background">
-      {/* Interactive Data Mesh Background - Reduced on mobile */}
-      <DataMeshBackground mouseX={mouseX} mouseY={mouseY} />
-
-      {/* Animated Mesh Gradient - Reduced on mobile */}
-      <AnimatedMeshGradient />
-
-      <div className="container-width section-padding relative z-10 px-4 sm:px-6">
-        <div className="min-h-screen flex items-center py-12 sm:py-8 md:-my-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12 items-center w-full">
-
-            {/* Image Column with 3D Tilt & Floating - Tilt disabled on touch devices */}
-            <div className="flex justify-center lg:justify-end order-1 lg:order-2">
-              <ProfilePhoto />
-            </div>
-
-            {/* Content Column with Kinetic Typography */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="space-y-6 md:space-y-8 order-2 lg:order-1 text-center lg:text-left"
+          <div
+            className="mt-[26px] flex flex-wrap gap-4"
+            style={{
+              animation: "fadeUp .8s cubic-bezier(.22,1,.36,1) both",
+              animationDelay: "calc(var(--seq) * 3s)",
+            }}
+          >
+            <a
+              href="#trabalhos"
+              className="rounded-full bg-ink px-[34px] py-[17px] font-display text-[13px] font-extrabold tracking-[.06em] text-void no-underline transition-colors duration-[250ms] hover:bg-violet hover:text-ink"
             >
-              <div className="space-y-3 md:space-y-4">
-                {/* Split Text Animation - Name - Responsive sizing */}
-                <SplitTextHeading text="Patrick Diniz" />
+              VER TRABALHOS ↓
+            </a>
+            <a
+              href={CV_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full border border-[rgba(242,239,232,.3)] px-[34px] py-[17px] font-display text-[13px] font-semibold tracking-[.06em] text-ink no-underline transition-colors duration-[250ms] hover:border-violet hover:text-violet"
+            >
+              CURRÍCULO ↗
+            </a>
+          </div>
+        </div>
 
-                {/* Subtitle with blur-in effect - Responsive sizing */}
-                <motion.h2
-                  initial={{ opacity: 0, filter: "blur(10px)" }}
-                  animate={{ opacity: 1, filter: "blur(0px)" }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 120,
-                    damping: 20,
-                    delay: 1.2
-                  }}
-                  className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-primary font-semibold"
-                >
-                  Analista de Dados & Automação T.I
-                </motion.h2>
-
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 120,
-                    damping: 20,
-                    delay: 1.4
-                  }}
-                  className="text-sm sm:text-base md:text-lg text-foreground-muted max-w-lg mx-auto lg:mx-0 leading-relaxed"
-                >
-                  Transformando dados em insights e automatizando processos com
-                  soluções de tecnologia inovadoras e eficientes.
-                </motion.p>
-              </div>
-
-              {/* Button - Full width on mobile */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 120,
-                  damping: 20,
-                  delay: 1.6
-                }}
-                className="flex justify-center lg:justify-start"
-              >
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="w-full sm:w-auto border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-8 py-3 transition-all duration-300"
-                  asChild
-                >
-                  <a
-                    href="https://drive.google.com/file/d/1YgNbnXKP43306sia4YMR7_wA9-rMpM8d/view?usp=drive_link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center"
-                  >
-                    Meu Currículo
-                    <ExternalLink className="ml-2 h-5 w-5" />
-                  </a>
-                </Button>
-              </motion.div>
-            </motion.div>
+        {/* fig. 01 — sticker sobre placa violeta rotacionada */}
+        <div
+          className="relative mx-auto h-[274px] w-[250px] flex-none md:mx-0"
+          style={{
+            animation: "fadeUp .9s cubic-bezier(.22,1,.36,1) both",
+            animationDelay: "calc(var(--seq) * 2.9s)",
+          }}
+        >
+          <div className="absolute inset-x-0 bottom-0 top-[18px] rotate-[3deg] rounded-[2px] bg-violet" />
+          <div
+            className="absolute inset-0 flex items-end justify-center"
+            style={{ animation: "floatY2 5.5s ease-in-out infinite" }}
+          >
+            <img
+              src={sticker}
+              alt="Patrick Diniz"
+              width={264}
+              height={272}
+              className="h-[272px] w-[264px] [filter:drop-shadow(0_18px_30px_rgba(0,0,0,.45))]"
+            />
+          </div>
+          <div className="absolute -bottom-4 -left-5 -rotate-2 border border-[rgba(242,239,232,.25)] bg-void px-[14px] py-2 font-mono text-[11px] text-ink">
+            fig. 01 — o autor
+          </div>
+          <div
+            className="absolute -right-[26px] -top-[26px] h-[76px] w-[76px]"
+            style={{ animation: "spinSlow 14s linear infinite" }}
+          >
+            <svg viewBox="0 0 100 100" width="76" height="76" aria-hidden="true">
+              <defs>
+                <path
+                  id="hero-circ"
+                  d="M 50 50 m -38 0 a 38 38 0 1 1 76 0 a 38 38 0 1 1 -76 0"
+                />
+              </defs>
+              <text className="font-mono text-[11.5px] tracking-[.22em] [fill:rgba(242,239,232,.5)]">
+                <textPath href="#hero-circ">DADOS · AUTOMAÇÃO · CÓDIGO ·</textPath>
+              </text>
+            </svg>
           </div>
         </div>
       </div>
-
-      {/* Refined Scroll Indicator */}
-      <ScrollIndicator />
-    </section>
-  );
-};
-
-// Interactive Data Mesh Background Component - With mobile optimization
-interface DataMeshBackgroundProps {
-  mouseX: MotionValue<number>;
-  mouseY: MotionValue<number>;
-}
-
-const DataMeshBackground = ({ mouseX, mouseY }: DataMeshBackgroundProps) => {
-  const offsetX = useSpring(useTransform(mouseX, [-1, 1], [-20, 20]), { stiffness: 120, damping: 20 });
-  const offsetY = useSpring(useTransform(mouseY, [-1, 1], [-20, 20]), { stiffness: 120, damping: 20 });
-
-  return (
-    <motion.div
-      style={{ x: offsetX, y: offsetY }}
-      className="absolute inset-0 opacity-20 md:opacity-30"
-    >
-      <svg
-        className="w-full h-full"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <defs>
-          <pattern
-            id="grid"
-            width="40"
-            height="40"
-            patternUnits="userSpaceOnUse"
-          >
-            <path
-              d="M 40 0 L 0 0 0 40"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="0.5"
-              className="text-primary/20"
-            />
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#grid)" />
-      </svg>
-    </motion.div>
-  );
-};
-
-// Animated Mesh Gradient - Reduced intensity on mobile
-const AnimatedMeshGradient = () => {
-  return (
-    <div className="absolute inset-0 opacity-30 md:opacity-40">
-      <motion.div
-        animate={{
-          background: [
-            "radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.08) 0%, transparent 50%)",
-            "radial-gradient(circle at 80% 50%, rgba(139, 92, 246, 0.08) 0%, transparent 50%)",
-            "radial-gradient(circle at 60% 40%, rgba(59, 130, 246, 0.08) 0%, transparent 50%)",
-          ],
-        }}
-        transition={{
-          duration: 15,
-          repeat: Infinity,
-          repeatType: "reverse",
-          ease: "easeInOut",
-        }}
-        className="absolute inset-0"
-      />
     </div>
-  );
-};
 
-// Split Text Heading with Stagger Animation - Mobile optimized
-const SplitTextHeading = ({ text }: { text: string }) => {
-  const letters = text.split("");
-
-  const container: Variants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.03,
-        delayChildren: 0.3,
-      },
-    },
-  };
-
-  const child: Variants = {
-    hidden: {
-      opacity: 0,
-      y: 20,
-      filter: "blur(4px)"
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      filter: "blur(0px)",
-      transition: {
-        type: "spring",
-        stiffness: 120,
-        damping: 20,
-      },
-    },
-  };
-
-  // O degrad\u00EA n\u00E3o pode vir de `hero-text` aqui: `background-clip: text` no h1 n\u00E3o
-  // recorta glifos de filhos `inline-block`, e o `inline-block` \u00E9 o que permite
-  // animar cada letra. As letras herdariam s\u00F3 o `text-transparent` e o nome
-  // sumiria. Em vez disso, cada letra recebe uma cor s\u00F3lida interpolada ao longo
-  // do mesmo degrad\u00EA \u2014 visualmente equivalente, sem depender de medir o DOM.
-  const lastIndex = letters.length - 1;
-
-  return (
-    <motion.h1
-      variants={container}
-      initial="hidden"
-      animate="visible"
-      className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight"
-    >
-      {letters.map((letter, index) => (
-        <motion.span
-          key={`${letter}-${index}`}
-          variants={child}
-          className="inline-block"
-          style={{
-            display: letter === " " ? "inline" : "inline-block",
-            color: `color-mix(in oklab, hsl(var(--foreground)) ${
-              lastIndex > 0 ? 100 - (index / lastIndex) * 100 : 100
-            }%, hsl(var(--primary)))`,
-          }}
-        >
-          {letter === " " ? "\u00A0" : letter}
-        </motion.span>
-      ))}
-    </motion.h1>
-  );
-};
-
-// Profile Photo with 3D Tilt & Floating Animation - Touch device detection
-const ProfilePhoto = () => {
-  const photoRef = useRef<HTMLDivElement>(null);
-  const mouseX = useMotionValue(0.5);
-  const mouseY = useMotionValue(0.5);
-  const [isTouchDevice, setIsTouchDevice] = useState(false);
-
-  // Detect touch device
-  useEffect(() => {
-    const checkTouchDevice = () => {
-      setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0);
-    };
-    checkTouchDevice();
-  }, []);
-
-  // 3D Tilt - Only active on non-touch devices
-  const rotateX = useSpring(useTransform(mouseY, [0, 1], [10, -10]), { stiffness: 120, damping: 20 });
-  const rotateY = useSpring(useTransform(mouseX, [0, 1], [-10, 10]), { stiffness: 120, damping: 20 });
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!photoRef.current || isTouchDevice) return;
-
-    const rect = photoRef.current.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width;
-    const y = (e.clientY - rect.top) / rect.height;
-
-    mouseX.set(x);
-    mouseY.set(y);
-  };
-
-  const handleMouseLeave = () => {
-    if (isTouchDevice) return;
-    mouseX.set(0.5);
-    mouseY.set(0.5);
-  };
-
-  return (
-    <motion.div
-      ref={photoRef}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{
-        type: "spring",
-        stiffness: 120,
-        damping: 20,
-        delay: 0.5
+    <div
+      className="absolute bottom-[26px] left-[22px] flex items-center gap-[10px] font-mono text-[11px] text-[rgba(242,239,232,.45)] md:left-11"
+      style={{
+        animation: "fadeUp .8s cubic-bezier(.22,1,.36,1) both",
+        animationDelay: "calc(var(--seq) * 3.2s)",
       }}
-      className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96"
     >
-      {/* Pulsing Glow - Circular */}
-      <motion.div
-        animate={{
-          opacity: [0.3, 0.5, 0.3],
-          scale: [1, 1.08, 1],
-        }}
-        transition={{
-          duration: 3,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="absolute inset-0 bg-primary/40 rounded-full blur-3xl"
-      />
-
-      {/* Photo Container with 3D Tilt - Circular with purple background */}
-      <motion.div
-        style={isTouchDevice ? {} : {
-          rotateX,
-          rotateY,
-          transformStyle: "preserve-3d",
-        }}
-        animate={{
-          y: [0, -8, 0],
-        }}
-        transition={{
-          duration: 4,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="relative z-10 w-full h-full rounded-full overflow-hidden bg-primary shadow-2xl shadow-primary/50"
-      >
-        <img
-          src={profilePhoto}
-          alt="Patrick Diniz"
-          className="w-full h-full object-cover object-center scale-110"
-          loading="eager"
-        />
-      </motion.div>
-    </motion.div>
-  );
-};
-
-// Scroll Indicator - Adjusted position for mobile
-const ScrollIndicator = () => {
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 2, duration: 1 }}
-      className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-20"
-    >
-      {/* SCROLL text */}
-      <motion.span
-        animate={{
-          opacity: [0.5, 1, 0.5],
-        }}
-        transition={{
-          duration: 2,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="text-xs tracking-widest text-foreground-muted uppercase font-semibold"
-      >
-        Scroll
-      </motion.span>
-
-      {/* Vertical line with sliding diamond */}
-      <div className="relative h-16 md:h-20 w-[2px] bg-gradient-to-b from-transparent via-primary/50 to-transparent">
-        <motion.div
-          animate={{
-            y: [0, 40, 0],
-          }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute left-1/2 -translate-x-1/2 w-2 h-2 bg-primary rotate-45"
-        />
-      </div>
-    </motion.div>
-  );
-};
+      <span style={{ animation: "scrollNudge 1.8s ease-in-out infinite" }}>↓</span>{" "}
+      SCROLL
+    </div>
+  </section>
+);
 
 export default Hero;

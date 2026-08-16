@@ -2,117 +2,178 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Patrick Diniz Portfolio Design System - Dark Mode with Vibrant Purple */
+/* ============================================================
+   Patrick Diniz — Portfólio 2026
+   "Automatizando o tédio" — editorial dark + violeta.
+   ============================================================ */
+
+/* Fontes self-hosted: mantêm `font-src 'self'` do CSP intacto.
+   Subset latin — cobre toda a acentuação do português. */
+@font-face {
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url("/fonts/archivo-variable.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+    U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122,
+    U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/instrument-serif-italic.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+    U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122,
+    U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/jetbrains-mono.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+    U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122,
+    U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
 @layer base {
   :root {
-    /* Dark theme colors */
-    --background: 220 13% 8%;
-    --background-secondary: 220 13% 12%;
-    --foreground: 210 40% 98%;
-    --foreground-muted: 217 10% 70%;
+    /* Governa a cadeia de entrada do hero. 1 = com preloader,
+       0 = entrada imediata. O Preloader grava 0 quando pula. */
+    --seq: 1;
 
-    /* Purple primary colors */
-    --primary: 261 91% 65%;
-    --primary-dark: 271 81% 55%;
-    --primary-light: 271 91% 75%;
-    --primary-foreground: 210 40% 98%;
+    --background: 36 16% 6%; /* #12100d */
+    --background-secondary: 30 18% 4%; /* #0d0b09 */
+    --foreground: 42 28% 93%; /* #f2efe8 */
+    --foreground-muted: 42 12% 68%;
 
-    /* Card and surface colors */
-    --card: 220 13% 12%;
-    --card-hover: 220 13% 16%;
-    --card-foreground: 210 40% 98%;
+    --primary: 259 100% 71%; /* #9a6bff */
+    --primary-dark: 259 80% 60%;
+    --primary-light: 259 100% 82%;
+    --primary-foreground: 36 16% 6%;
 
-    /* Accent and secondary colors */
-    --accent: 271 91% 65%;
-    --accent-foreground: 210 40% 98%;
-    --secondary: 220 13% 20%;
-    --secondary-foreground: 210 40% 98%;
+    --card: 30 18% 4%;
+    --card-hover: 36 14% 9%;
+    --card-foreground: 42 28% 93%;
 
-    /* Muted colors */
-    --muted: 220 13% 16%;
-    --muted-foreground: 217 10% 70%;
+    --accent: 259 100% 71%;
+    --accent-foreground: 36 16% 6%;
+    --secondary: 36 10% 14%;
+    --secondary-foreground: 42 28% 93%;
 
-    /* Border and input */
-    --border: 220 13% 20%;
-    --input: 220 13% 16%;
-    --ring: 271 91% 65%;
+    --muted: 36 10% 12%;
+    --muted-foreground: 42 12% 62%;
 
-    /* Destructive */
+    --border: 42 14% 20%;
+    --input: 36 10% 12%;
+    --ring: 259 100% 71%;
+
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 42 28% 93%;
 
-    /* Popover */
-    --popover: 220 13% 12%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 30 18% 4%;
+    --popover-foreground: 42 28% 93%;
 
-    --radius: 0.75rem;
+    /* O visual novo é quadrado. Botões pill usam rounded-full local. */
+    --radius: 0.25rem;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(
-      135deg,
-      hsl(271 91% 65%),
-      hsl(271 81% 55%)
-    );
-    --gradient-secondary: linear-gradient(
-      180deg,
-      hsl(220 13% 12%),
-      hsl(220 13% 8%)
-    );
-    --gradient-hero: linear-gradient(
-      135deg,
-      hsl(220 13% 8%) 0%,
-      hsl(220 13% 12%) 50%,
-      hsl(271 91% 65% / 0.1) 100%
-    );
-
-    /* Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(220 13% 4% / 0.5);
-    --shadow-md: 0 4px 6px -1px hsl(220 13% 4% / 0.5),
-      0 2px 4px -1px hsl(220 13% 4% / 0.3);
-    --shadow-lg: 0 10px 15px -3px hsl(220 13% 4% / 0.5),
-      0 4px 6px -2px hsl(220 13% 4% / 0.3);
-    --shadow-purple: 0 10px 30px -10px hsl(271 91% 65% / 0.3);
-
-    /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-}
-
-/* Custom component classes */
-@layer components {
-  .glass-card {
-    @apply bg-card/80 backdrop-blur-sm border border-border/50;
+    --rule: rgba(242, 239, 232, 0.12);
+    --rule-strong: rgba(242, 239, 232, 0.15);
   }
 
-  .hero-text {
-    @apply bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent;
-  }
-
-  .skill-tag {
-    @apply bg-primary/10 text-primary border border-primary/20 backdrop-blur-sm;
-  }
-
-  .project-card {
-    @apply glass-card hover:bg-card-hover transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
-  }
-
-  .section-padding {
-    @apply py-5 px-4 md:px-8 lg:px-12;
-  }
-
-  .container-width {
-    @apply max-w-6xl mx-auto;
-  }
-}
-
-@layer base {
   * {
     @apply border-border;
   }
 
   body {
-    @apply bg-background text-foreground;
+    margin: 0;
+    background: #12100d;
+    color: #f2efe8;
+    font-family: "Archivo", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+  }
+
+  ::selection {
+    background: #9a6bff;
+    color: #12100d;
+  }
+}
+
+/* ============================================================
+   Keyframes globais. Os componentes aplicam via style={{ animation }}
+   para manter os delays da sequência legíveis no ponto de uso.
+   ============================================================ */
+
+@keyframes marqueeX {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes heroLine {
+  from { opacity: 0; transform: translateY(110%); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes floatY2 {
+  0%, 100% { transform: rotate(-2deg) translateY(0); }
+  50% { transform: rotate(-2deg) translateY(-10px); }
+}
+@keyframes blinkDot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+@keyframes spinSlow {
+  from { transform: rotate(0); }
+  to { transform: rotate(360deg); }
+}
+@keyframes scrollNudge {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+@keyframes preTedioSeq {
+  0% { opacity: 0; transform: translateY(26px); }
+  12% { opacity: 1; transform: translateY(0); }
+  62% { opacity: 1; transform: translateY(0); }
+  76% { opacity: 0; transform: translateY(-36px); }
+  100% { opacity: 0; transform: translateY(-36px); }
+}
+@keyframes preStrikeSeq {
+  0%, 28% { transform: scaleX(0); opacity: 1; }
+  54% { transform: scaleX(1); opacity: 1; }
+  64% { opacity: 1; }
+  72% { opacity: 0; }
+  100% { opacity: 0; transform: scaleX(1); }
+}
+@keyframes preAutoSeq {
+  0%, 70% { transform: translateY(112%); opacity: 0; }
+  76% { opacity: 1; }
+  88% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Movimento reduzido: zera duração E delay. A regra do handoff só zerava
+   a duração, o que deixava a página em branco durante os 2,45s de delay. */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --seq: 0;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
   }
 }

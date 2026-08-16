@@ -43,4 +43,5 @@ Thumbs.db
 
 # Local working files (not part of the deployed site)
 .claude/
+.superpowers/
 design_handoff_portfolio_2026/

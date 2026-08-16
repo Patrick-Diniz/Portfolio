@@ -1,34 +1,38 @@
 import { describe, expect, it } from "vitest";
 import { render, screen } from "@testing-library/react";
 import Hero from "./Hero";
+import { CV_URL } from "@/lib/portfolio-data";
 
-/**
- * Regressão: o h1 do hero carregava a classe `hero-text`, que é
- * `bg-gradient-to-r ... bg-clip-text text-transparent`. Como cada letra vive num
- * filho `display: inline-block` (necessário para animá-la), `background-clip: text`
- * não recorta esses glifos — as letras só herdavam `color: transparent` e o nome
- * "Patrick Diniz" ficava invisível em produção, no desktop e no mobile.
- *
- * A cor passou a ser aplicada letra a letra, via style inline.
- */
 describe("Hero", () => {
-  it("pinta cada letra do título com cor própria em vez de depender de bg-clip-text", () => {
-    const { container } = render(<Hero />);
+  it("anuncia o título em um h1 e o expõe como texto legível", () => {
+    render(<Hero />);
 
     const heading = screen.getByRole("heading", { level: 1 });
-    expect(heading.className).not.toContain("hero-text");
+    expect(heading.textContent).toContain("Automatizando");
+    expect(heading.textContent).toContain("o tédio");
+  });
 
-    const letters = Array.from(heading.querySelectorAll("span"));
-    expect(letters.length).toBeGreaterThan(0);
+  it("aponta o CTA de currículo para a URL do portfolio-data, em nova aba e sem vazar referrer", () => {
+    render(<Hero />);
 
-    for (const letter of letters) {
-      expect(letter.style.color).not.toBe("");
-      expect(letter.style.color).not.toBe("transparent");
-    }
+    const cv = screen.getByRole("link", { name: /currículo/i });
+    expect(cv).toHaveAttribute("href", CV_URL);
+    expect(cv).toHaveAttribute("target", "_blank");
+    expect(cv).toHaveAttribute("rel", expect.stringContaining("noreferrer"));
+  });
 
-    // O espaço entre as palavras vira U+00A0 para não colapsar entre os spans
-    // inline-block, então normaliza antes de comparar.
-    const text = container.textContent?.replace(/\u00A0/g, " ");
-    expect(text).toContain("Patrick Diniz");
+  it("liga o CTA principal à âncora de trabalhos", () => {
+    render(<Hero />);
+
+    expect(screen.getByRole("link", { name: /ver trabalhos/i })).toHaveAttribute(
+      "href",
+      "#trabalhos"
+    );
+  });
+
+  it("descreve a figura do autor para leitor de tela", () => {
+    render(<Hero />);
+
+    expect(screen.getByAltText("Patrick Diniz")).toBeInTheDocument();
   });
 });

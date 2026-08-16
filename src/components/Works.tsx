@@ -95,7 +95,15 @@ const Works = () => {
                       : `${PANEL_TRANSITION}, visibility 0s .45s`,
                   }}
                 >
-                  <div className="grid grid-cols-1 gap-[26px] pb-8 pl-1 pr-1 pt-0.5 md:grid-cols-3 md:pl-[57px]">
+                  {/*
+                    As três colunas entram em `lg` (1024px), não em `md` (900px).
+                    Entre 900 e 1023px a coluna esquerda tem ~364–488px: dividida
+                    em três com o recuo de 57px, cada campo fica com ~90px e a
+                    palavra mais longa do texto ("automaticamente.") precisa de
+                    105px, transbordando para a calha. A partir de 1024px cada
+                    coluna tem ~126px e o texto cabe.
+                  */}
+                  <div className="grid grid-cols-1 gap-[26px] pb-8 pl-1 pr-1 pt-0.5 lg:grid-cols-3 lg:pl-[57px]">
                     <Field label="PROBLEMA" text={cs.problem} />
                     <Field label="SOLUÇÃO" text={cs.solution} />
                     <Field label="RESULTADO" text={cs.result} accent />
